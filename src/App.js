@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [buttonText, setButtonText] = useState('Click me, please');
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +19,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => setButtonText('Thanks, been clicked!')}>
+          {buttonText}
+        </button>
       </header>
     </div>
   );
