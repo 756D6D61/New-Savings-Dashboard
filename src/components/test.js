@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import { Switch, useLocation } from 'react-router-dom'
 
 function usePageViews() {
