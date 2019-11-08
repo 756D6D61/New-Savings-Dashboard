@@ -15,14 +15,17 @@ const routes = [
 			},
 			{
 				path: '/budget',
+				exact: true,
 				component: Budget
 			},
 			{
 				path: '/categories',
+				exact: true,
 				component: Categories
 			},
 			{
-				path: '/addaccount',
+				path: '/addAccount',
+				exact: true,
 				component: AddAccount
 			}
 		]
