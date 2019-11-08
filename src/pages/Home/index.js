@@ -1,9 +1,9 @@
 import React from 'react'
 import Nav from '../../components/Nav'
-const Home = () => {
+const Home = ({ route }) => {
 	return (
 		<div>
-			<Nav /> Home
+			<Nav route={route} /> Home
 		</div>
 	)
 }
