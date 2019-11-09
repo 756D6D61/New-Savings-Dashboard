@@ -123,55 +123,53 @@ export default function MiniDrawer() {
 					</Typography>
 				</Toolbar>
 			</AppBar>
-			<BrowserRouter>
-				<Drawer
-					variant="permanent"
-					className={clsx(classes.drawer, {
+			<Drawer
+				variant="permanent"
+				className={clsx(classes.drawer, {
+					[classes.drawerOpen]: open,
+					[classes.drawerClose]: !open
+				})}
+				classes={{
+					paper: clsx({
 						[classes.drawerOpen]: open,
 						[classes.drawerClose]: !open
-					})}
-					classes={{
-						paper: clsx({
-							[classes.drawerOpen]: open,
-							[classes.drawerClose]: !open
-						})
-					}}
-					open={open}
-				>
-					<div className={classes.toolbar}>
-						<IconButton onClick={handleDrawerClose}>
-							{theme.direction === 'rtl' ? (
-								<ChevronRightIcon />
-							) : (
-								<ChevronLeftIcon />
-							)}
-						</IconButton>
-					</div>
-					<Divider />
-					<List>
-						{['Budget', 'Starred', 'Send email', 'Drafts'].map(
-							(text, index) => (
-								<ListItem
-									button
-									key={text}
-									component={Link}
-									to={'/' + text}
-								>
-									<ListItemIcon>
-										{index % 2 === 0 ? (
-											<InboxIcon />
-										) : (
-											<MailIcon />
-										)}
-									</ListItemIcon>
-									<ListItemText primary={text} />
-								</ListItem>
-							)
+					})
+				}}
+				open={open}
+			>
+				<div className={classes.toolbar}>
+					<IconButton onClick={handleDrawerClose}>
+						{theme.direction === 'rtl' ? (
+							<ChevronRightIcon />
+						) : (
+							<ChevronLeftIcon />
 						)}
-					</List>
-					<Divider />
-				</Drawer>
-			</BrowserRouter>
+					</IconButton>
+				</div>
+				<Divider />
+				<List>
+					{['Budget', 'Starred', 'Send email', 'Drafts'].map(
+						(text, index) => (
+							<ListItem
+								button
+								key={text}
+								component={Link}
+								to={'/' + text}
+							>
+								<ListItemIcon>
+									{index % 2 === 0 ? (
+										<InboxIcon />
+									) : (
+										<MailIcon />
+									)}
+								</ListItemIcon>
+								<ListItemText primary={text} />
+							</ListItem>
+						)
+					)}
+				</List>
+				<Divider />
+			</Drawer>
 		</div>
 	)
 }
