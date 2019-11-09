@@ -5,7 +5,7 @@ import NavTest from '../../components/NavTest'
 const Home = ({ route }) => {
 	return (
 		<div>
-			<Nav route={route} />
+			<NavTest route={route} />
 		</div>
 	)
 }
