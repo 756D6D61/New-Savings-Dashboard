@@ -19,7 +19,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
-import { Switch, Route, Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import routes from '../config/routes'
 
 const drawerWidth = 240
@@ -89,7 +89,6 @@ export default function MiniDrawer() {
 	const classes = useStyles()
 	const theme = useTheme()
 	//{classes, theme}  = this.props
-
 	const [open, setOpen] = React.useState(false)
 
 	const handleDrawerOpen = () => {
@@ -175,7 +174,6 @@ export default function MiniDrawer() {
 		</div>
 	)
 }
-
 /*
 {routes.map((data, key) => {
 	return (
@@ -199,18 +197,19 @@ export default function MiniDrawer() {
 	)
 })}
  */
-
-/*{routes.map((text, index) => (
-						<ListItem
-							button
-							key={text.name}
-							component={text.component}
-							to={text.path}
-						>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text.name} />
-						</ListItem>
-					))}
+/*{routes.map((text, index) =>
+	(
+		<ListItem
+			button
+			key={text.name}
+			component={text.component}
+			to={text.path}
+		>
+			<ListItemIcon>
+				{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+			</ListItemIcon>
+			<ListItemText primary={text.name} />
+		</ListItem>
+	)
+	)}
 					*/
