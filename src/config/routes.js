@@ -11,22 +11,30 @@ const routes = [
 			{
 				path: '/',
 				exact: true,
-				component: Home
+				component: Home,
+				icon: Home,
+				name: Home
 			},
 			{
 				path: '/budget',
 				exact: true,
-				component: Budget
+				component: Budget,
+				icon: Home,
+				name: Budget
 			},
 			{
 				path: '/categories',
 				exact: true,
-				component: Categories
+				component: Categories,
+				icon: Home,
+				name: Categories
 			},
 			{
 				path: '/addAccount',
 				exact: true,
-				component: AddAccount
+				component: AddAccount,
+				icon: Home,
+				name: AddAccount
 			}
 		]
 	}
