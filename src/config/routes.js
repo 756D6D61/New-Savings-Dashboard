@@ -6,37 +6,32 @@ import Root from '../components/Root'
 
 const routes = [
 	{
-		component: Root,
-		routes: [
-			{
-				path: '/',
-				exact: true,
-				component: Home,
-				icon: Home,
-				name: Home
-			},
-			{
-				path: '/budget',
-				exact: true,
-				component: Budget,
-				icon: Home,
-				name: Budget
-			},
-			{
-				path: '/categories',
-				exact: true,
-				component: Categories,
-				icon: Home,
-				name: Categories
-			},
-			{
-				path: '/addAccount',
-				exact: true,
-				component: AddAccount,
-				icon: Home,
-				name: AddAccount
-			}
-		]
+		path: '/',
+		exact: true,
+		component: Home,
+		icon: Home,
+		name: Home
+	},
+	{
+		path: '/budget',
+		exact: true,
+		component: Budget,
+		icon: Home,
+		name: Budget
+	},
+	{
+		path: '/categories',
+		exact: true,
+		component: Categories,
+		icon: Home,
+		name: Categories
+	},
+	{
+		path: '/addAccount',
+		exact: true,
+		component: AddAccount,
+		icon: Home,
+		name: AddAccount
 	}
 ]
 

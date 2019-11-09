@@ -148,25 +148,19 @@ export default function MiniDrawer() {
 				</div>
 				<Divider />
 				<List>
-					{['Budget', 'Starred', 'Send email', 'Drafts'].map(
-						(text, index) => (
-							<ListItem
-								button
-								key={text}
-								component={Link}
-								to={'/' + text}
-							>
-								<ListItemIcon>
-									{index % 2 === 0 ? (
-										<InboxIcon />
-									) : (
-										<MailIcon />
-									)}
-								</ListItemIcon>
-								<ListItemText primary={text} />
-							</ListItem>
-						)
-					)}
+					{routes.map((text, index) => (
+						<ListItem
+							button
+							key={text.name}
+							component={text.component}
+							to={'/' + text}
+						>
+							<ListItemIcon>
+								<text.icon />
+							</ListItemIcon>
+							<ListItemText primary={text.name} />
+						</ListItem>
+					))}
 				</List>
 				<Divider />
 			</Drawer>
