@@ -2,7 +2,6 @@ import Home from '../pages/Home'
 import Budget from '../pages/Budget'
 import Categories from '../pages/Categories'
 import AddAccount from '../pages/AddAccount'
-import Root from '../components/Root'
 
 const routes = [
 	{
