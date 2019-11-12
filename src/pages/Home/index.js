@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
+import Container from '@material-ui/core/Container'
 
 const Home = ({ route }) => {
 	return (
 		<Page>
+			<Container>test</Container>
 			tesing tesing tesing tesing tesing tesing tesing
 			<div class="flex flex-wrap">
 				<div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-500">

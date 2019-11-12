@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clsx from 'clsx'
 import {
 	makeStyles,
@@ -22,6 +22,37 @@ import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
 import { Link } from 'react-router-dom'
 import routes from '../config/routes'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { Switch, FormControlLabel } from '@material-ui/core'
+import CssBaseline from '@material-ui/core/CssBaseline'
+
+const themeObject = {
+	palette: {
+		primary: { main: '#053f5b' },
+		secondary: { main: '#5e3c6f' },
+		type: 'light'
+	},
+	themeName: 'Blue Lagoon 2020'
+}
+
+const useDarkMode = () => {
+	const [theme, setTheme] = useState(themeObject)
+	const {
+		palette: { type }
+	} = theme
+
+	const toggleDarkMode = () => {
+		const updatedTheme = {
+			...theme,
+			palette: {
+				...theme.palette,
+				type: type === 'light' ? 'dark' : 'light'
+			}
+		}
+		setTheme(updatedTheme)
+	}
+	return [theme, toggleDarkMode]
+}
 
 const drawerWidth = 240
 
@@ -88,7 +119,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function MiniDrawer() {
 	const classes = useStyles()
-	const theme = useTheme()
+	//const theme = useTheme()
 	//{classes, theme}  = this.props
 	const [open, setOpen] = React.useState(false)
 
@@ -100,8 +131,12 @@ export default function MiniDrawer() {
 		setOpen(false)
 	}
 
+	const [theme, toggleDarkMode] = useDarkMode()
+	const themeConfig = createMuiTheme(theme)
 	return (
-		<div>
+		<MuiThemeProvider theme={themeConfig}>
+			<CssBaseline />
+
 			<AppBar
 				position="fixed"
 				className={clsx(classes.appBar, {
@@ -171,8 +206,11 @@ export default function MiniDrawer() {
 					)}
 				</List>
 				<Divider />
+				<FormControlLabel
+					control={<Switch onClick={toggleDarkMode} />}
+				/>
 			</Drawer>
-		</div>
+		</MuiThemeProvider>
 	)
 }
 /*
