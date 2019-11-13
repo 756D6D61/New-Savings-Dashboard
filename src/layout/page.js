@@ -10,9 +10,9 @@ const Page = ({ route }) => {
 			<br />
 			<br />
 			<Container fixed>
-				<div class="flex flex-wrap">
-					<div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4">
-						content
+				<div className="flex flex-wrap">
+					<div className="w-full">
+						<p>[this is where the child props should go]</p>
 					</div>
 				</div>
 			</Container>

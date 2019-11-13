@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
-import Container from '@material-ui/core/Container'
 
 const Home = ({ route }) => {
 	return (
