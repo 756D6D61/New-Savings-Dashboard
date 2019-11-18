@@ -185,25 +185,13 @@ export default function MiniDrawer() {
 				</div>
 				<Divider />
 				<List>
-					{['Budget', 'Starred', 'Send email', 'Drafts'].map(
-						(text, index) => (
-							<ListItem
-								button
-								key={text}
-								component={Link}
-								to={'/' + text}
-							>
-								<ListItemIcon>
-									{index % 2 === 0 ? (
-										<InboxIcon />
-									) : (
-										<MailIcon />
-									)}
-								</ListItemIcon>
-								<ListItemText primary={text} />
-							</ListItem>
-						)
-					)}
+					<Link to="/">Home</Link>
+					<br />
+					<Link to="/Budget">Budget</Link>
+					<br />
+					<Link to="/Categories">Categories</Link>
+					<br />
+					<Link to="/AddAccount">Add Account</Link>
 				</List>
 				<Divider />
 				<FormControlLabel
@@ -252,3 +240,25 @@ export default function MiniDrawer() {
 	)
 	)}
 					*/
+
+/*
+{['Budget', 'Starred', 'Send email', 'Drafts'].map(
+						(text, index) => (
+							<ListItem
+								button
+								key={text}
+								component={Link}
+								to={'/' + text}
+							>
+								<ListItemIcon>
+									{index % 2 === 0 ? (
+										<InboxIcon />
+									) : (
+										<MailIcon />
+									)}
+								</ListItemIcon>
+								<ListItemText primary={text} />
+							</ListItem>
+						)
+					)}
+ */
