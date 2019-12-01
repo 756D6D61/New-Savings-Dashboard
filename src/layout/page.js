@@ -17,13 +17,7 @@ const Page = ({ route, children }) => {
 			<br />
 			<br />
 			<br />
-			<Container fixed>
-				<div className="flex flex-wrap">
-					<div className="w-full">
-						<p>{children}</p>
-					</div>
-				</div>
-			</Container>
+			<Container fixed>{children}</Container>
 		</div>
 	)
 }
