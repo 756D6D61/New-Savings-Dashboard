@@ -4,11 +4,8 @@ import Container from '@material-ui/core/Container'
 import PropTypes from 'prop-types'
 
 const propTypes = {
-	classes: PropTypes.object,
 	children: PropTypes.node
 }
-
-const defaultProps = {}
 
 const Page = ({ route, children }) => {
 	return (
@@ -22,5 +19,4 @@ const Page = ({ route, children }) => {
 	)
 }
 Page.propTypes = propTypes
-Page.defaultProps = defaultProps
 export default Page
