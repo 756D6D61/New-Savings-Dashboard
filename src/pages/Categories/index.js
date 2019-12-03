@@ -7,9 +7,17 @@ const Categories = () => {
 	return (
 		<Page>
 			<div class="flex flex-wrap">
-				<div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-500">
-					Categories
+				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
+					Categories button
 					<FontAwesomeIcon icon={faCoffee} />
+				</div>
+			</div>
+			<div class="flex flex-wrap">
+				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
+					Categories
+				</div>
+				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
+					Table
 				</div>
 			</div>
 		</Page>
