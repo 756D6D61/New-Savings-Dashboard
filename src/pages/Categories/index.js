@@ -2,6 +2,7 @@ import React from 'react'
 import Page from '../../layout/Page'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Table from '../../components/Table'
 
 const Categories = () => {
 	return (
@@ -17,7 +18,7 @@ const Categories = () => {
 					Categories
 				</div>
 				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					Table
+					<Table />
 				</div>
 			</div>
 		</Page>
