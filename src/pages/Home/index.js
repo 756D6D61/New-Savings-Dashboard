@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
+import Graph from '../../components/Graph'
 
 const Home = ({ route }) => {
 	return (
@@ -15,7 +16,7 @@ const Home = ({ route }) => {
 			</div>
 			<div class="flex flex-wrap">
 				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					[Graph - savings for each month]
+					<Graph />
 				</div>
 				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
 					[Table - monthly savings]
