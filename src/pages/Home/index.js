@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../../components/Nav'
+//import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
 import Graph from '../../components/Graph'
 import Table from '../../components/Table'

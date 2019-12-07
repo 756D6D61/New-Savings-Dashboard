@@ -18,5 +18,7 @@ const Page = ({ route, children }) => {
 		</div>
 	)
 }
+
 Page.propTypes = propTypes
+
 export default Page
