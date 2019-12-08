@@ -32,7 +32,7 @@ const themeObject = {
 		secondary: { main: '#5e3c6f' },
 		type: 'light'
 	},
-	themeName: 'Blue Lagoon 2020'
+	themeName: 'Dark Theme'
 }
 
 const useDarkMode = () => {
