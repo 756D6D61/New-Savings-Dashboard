@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import {
 	makeStyles,
-	useTheme,
+	//useTheme,
 	Drawer,
 	AppBar,
 	Toolbar,
@@ -10,18 +10,18 @@ import {
 	Typography,
 	Divider,
 	IconButton,
-	ListItem,
-	ListItemIcon,
-	ListItemText,
-	Container
+	//ListItem,
+	//ListItemIcon,
+	//ListItemText,
+	//Container
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import InboxIcon from '@material-ui/icons/MoveToInbox'
-import MailIcon from '@material-ui/icons/Mail'
+//import InboxIcon from '@material-ui/icons/MoveToInbox'
+//import MailIcon from '@material-ui/icons/Mail'
 import { Link } from 'react-router-dom'
-import routes from '../config/routes'
+//import routes from '../config/routes'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Switch, FormControlLabel } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
