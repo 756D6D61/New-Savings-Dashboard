@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Table from '../../components/Table'
 import AddButton from '../../components/AddButton'
+import Icons from '../../components/CategoryIcons'
 
 const Categories = () => {
 	return (
@@ -17,7 +18,7 @@ const Categories = () => {
 			</div>
 			<div class="flex flex-wrap">
 				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					Categories
+					<Icons />
 				</div>
 				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
 					<Table />
