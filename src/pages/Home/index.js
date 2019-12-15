@@ -1,7 +1,7 @@
 import React from 'react'
 //import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
-import Graph from '../../components/Graph'
+import AltGraph from '../../components/AltGraph'
 import Table from '../../components/Table'
 
 const Home = ({ route }) => {
@@ -21,7 +21,7 @@ const Home = ({ route }) => {
 			<div class="flex flex-wrap -mx-2  mb-4">
 				<div class="w-1/2 px-2">
 					<div class=" h-12">
-						<Graph />
+						<AltGraph />
 					</div>
 				</div>
 				<div class="w-1/2 px-2  mb-4">
