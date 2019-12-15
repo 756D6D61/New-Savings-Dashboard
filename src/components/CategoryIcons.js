@@ -2,8 +2,8 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faBirthdayCake,
-	faPhone,
 	faHeart,
+	faSuitcaseRolling,
 	faHome
 } from '@fortawesome/free-solid-svg-icons'
 const CategoryIcons = () => {
@@ -15,13 +15,13 @@ const CategoryIcons = () => {
 					Birthday
 				</button>
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-					<FontAwesomeIcon icon={faPhone} />
+					<FontAwesomeIcon icon={faHeart} />
 					Wedding
 				</button>
 			</div>
 			<div>
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-					<FontAwesomeIcon icon={faHeart} />
+					<FontAwesomeIcon icon={faSuitcaseRolling} />
 					Holiday
 				</button>
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
