@@ -4,9 +4,11 @@ import AccForm from '../../components/Form'
 const AddAccount = () => {
 	return (
 		<Page>
-			<div class="flex flex-wrap">
-				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					<AccForm />
+			<div class="w-full h-2  pl-8">
+				<div class="w-full border-r border-b border-l border-gray-400  lg:border-t  bg-white rounded-b lg:rounded-r  lg:rounded-b p-4 flex flex-col justify-between leading-normal">
+					<div class="flex  items-center">
+						<AccForm />
+					</div>
 				</div>
 			</div>
 		</Page>
