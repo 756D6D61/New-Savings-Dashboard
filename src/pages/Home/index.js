@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 //import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/AltGraph'
@@ -7,29 +7,31 @@ import Table from '../../components/Table'
 const Home = ({ route }) => {
 	return (
 		<Page>
-			<div class="flex -mx-2">
-				<div class="w-1/3 px-2  mb-4">
-					<div class="bg-gray-400 h-12">Budgets</div>
-				</div>
-				<div class="w-1/3 px-2  mb-4">
-					<div class="bg-gray-500 h-12">Categories</div>
-				</div>
-				<div class="w-1/3 px-2  mb-4">
-					<div class="bg-gray-400 h-12">test</div>
-				</div>
-			</div>
-			<div class="flex flex-wrap -mx-2  mb-4">
-				<div class="w-1/2 px-2">
-					<div class=" h-12">
-						<AltGraph />
+			<Suspense fallback={<p>Loading</p>}>
+				<div class="flex -mx-2">
+					<div class="w-1/3 px-2  mb-4">
+						<div class="bg-gray-400 h-12">Budgets</div>
+					</div>
+					<div class="w-1/3 px-2  mb-4">
+						<div class="bg-gray-500 h-12">Categories</div>
+					</div>
+					<div class="w-1/3 px-2  mb-4">
+						<div class="bg-gray-400 h-12">test</div>
 					</div>
 				</div>
-				<div class="w-1/2 px-2  mb-4">
-					<div class=" h-12">
-						<Table />
+				<div class="flex flex-wrap -mx-2  mb-4">
+					<div class="w-1/2 px-2">
+						<div class=" h-12">
+							<AltGraph />
+						</div>
+					</div>
+					<div class="w-1/2 px-2  mb-4">
+						<div class=" h-12">
+							<Table />
+						</div>
 					</div>
 				</div>
-			</div>
+			</Suspense>
 		</Page>
 	)
 }
