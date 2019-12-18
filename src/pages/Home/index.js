@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-//import Nav from '../../components/Nav'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/AltGraph'
 import Table from '../../components/Table'
