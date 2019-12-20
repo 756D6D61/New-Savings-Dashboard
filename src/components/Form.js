@@ -2,7 +2,7 @@ import React from 'react'
 
 const AccForm = () => {
 	return (
-		<div>
+		<div class="w-full">
 			<label class="block">
 				<span class="text-gray-700">Account Name Name</span>
 				<input
@@ -11,9 +11,9 @@ const AccForm = () => {
 				/>
 			</label>
 
-			<div class="mt-4">
+			<div class="block mt-4">
 				<span class="text-gray-700">Account Type</span>
-				<div class="mt-2">
+				<div class="block mt-2">
 					<label class="inline-flex items-center">
 						<input
 							type="radio"
@@ -21,7 +21,7 @@ const AccForm = () => {
 							name="accountType"
 							value="savings"
 						/>
-						<span class="ml-2">Savings</span>
+						<span class="block ml-2">Savings</span>
 					</label>
 					<label class="inline-flex items-center ml-6">
 						<input
@@ -54,7 +54,7 @@ const AccForm = () => {
 				</select>
 			</label>
 
-			<div class="block">
+			<div class="block mt-4">
 				<span class="text-gray-700">Budgets</span>
 				<div class="mt-2">
 					<label class="inline-flex items-center">
@@ -133,7 +133,7 @@ const AccForm = () => {
 				</div>
 			</div>
 			<div>
-				<label class="block">
+				<label class="block mt-4">
 					<span class="text-gray-700">Savings Per Month</span>
 					<input
 						class="form-input mt-1 block w-full"
@@ -142,7 +142,9 @@ const AccForm = () => {
 				</label>
 			</div>
 			<div>
-				<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save</button>
+				<button class="block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+					Save
+				</button>
 			</div>
 		</div>
 	)

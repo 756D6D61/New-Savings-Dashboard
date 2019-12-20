@@ -20,7 +20,7 @@ const data = [
 
 const AltGraph = () => {
 	return (
-		<VictoryChart padding={50}>
+		<VictoryChart padding={75}>
 			<VictoryAxis fixLabelOverlap />
 			<VictoryAxis dependentAxis />
 			<VictoryLine
