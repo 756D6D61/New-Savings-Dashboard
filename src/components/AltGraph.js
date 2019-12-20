@@ -34,6 +34,10 @@ const AltGraph = () => {
 						strokeLinecap: 'round'
 					}
 				}}
+				animate={{
+					duration: 2000,
+					onLoad: { duration: 1000 }
+				}}
 			/>
 		</VictoryChart>
 	)
