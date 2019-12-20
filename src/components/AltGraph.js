@@ -3,6 +3,7 @@ import {
 	VictoryLine,
 	VictoryChart,
 	VictoryTheme,
+	VictoryContainer,
 	VictoryAxis,
 	VictoryClipContainer
 } from 'victory'
@@ -19,7 +20,7 @@ const data = [
 
 const AltGraph = () => {
 	return (
-		<VictoryChart theme={VictoryTheme.material}>
+		<VictoryChart padding={50}>
 			<VictoryAxis fixLabelOverlap />
 			<VictoryAxis dependentAxis />
 			<VictoryLine
