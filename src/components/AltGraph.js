@@ -1,5 +1,11 @@
 import React from 'react'
-import { VictoryLine, VictoryChart, VictoryTheme, VictoryAxis } from 'victory'
+import {
+	VictoryLine,
+	VictoryChart,
+	VictoryTheme,
+	VictoryAxis,
+	VictoryClipContainer
+} from 'victory'
 
 const data = [
 	{ date: '2019-12-10', volume: 16197 },
@@ -13,16 +19,13 @@ const data = [
 
 const AltGraph = () => {
 	return (
-		<VictoryChart theme={VictoryTheme.material} padding={75}>
-			<VictoryAxis
-				fixLabelOverlap
-				interpolation="natural"
-				style={{
-					tickLabels: { padding: 16, fontSize: 8 }
-				}}
-			/>
+		<VictoryChart theme={VictoryTheme.material}>
+			<VictoryAxis fixLabelOverlap />
 			<VictoryAxis dependentAxis />
 			<VictoryLine
+				groupComponent={
+					<VictoryClipContainer clipPadding={{ top: 50 }} />
+				}
 				data={data}
 				x="date"
 				y="volume"
