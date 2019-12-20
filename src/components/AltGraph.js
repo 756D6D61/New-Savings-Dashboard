@@ -12,7 +12,7 @@ const data = [
 	{ date: '2019-12-9', volume: 32010 },
 	{ date: '2019-12-8', volume: 26518 },
 	{ date: '2019-12-7', volume: 18606 },
-	{ date: '2019-12-6', volume: 16795 },
+	{ date: '2019-12-6', volume: 17795 },
 	{ date: '2019-12-5', volume: 28607 },
 	{ date: '2019-12-4', volume: 23621 }
 ]
