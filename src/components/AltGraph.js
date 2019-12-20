@@ -16,10 +16,25 @@ const AltGraph = () => {
 		<VictoryChart theme={VictoryTheme.material} padding={75}>
 			<VictoryAxis
 				fixLabelOverlap
-				style={{ tickLabels: { padding: 16, fontSize: 8 } }}
+				interpolation="natural"
+				style={{
+					tickLabels: { padding: 16, fontSize: 8 }
+				}}
 			/>
 			<VictoryAxis dependentAxis />
-			<VictoryLine data={data} x="date" y="volume" />
+			<VictoryLine
+				data={data}
+				x="date"
+				y="volume"
+				interpolation="natural"
+				style={{
+					data: {
+						stroke: '#c43a31',
+						strokeWidth: 3,
+						strokeLinecap: 'round'
+					}
+				}}
+			/>
 		</VictoryChart>
 	)
 }
