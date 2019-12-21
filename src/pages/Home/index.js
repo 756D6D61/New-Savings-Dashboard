@@ -41,21 +41,3 @@ const Home = ({ route }) => {
 }
 
 export default Home
-/*
-<div class="flex flex-wrap">
-				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					Budgets
-				</div>
-				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					Categories
-				</div>
-			</div>
-			<div class="flex flex-wrap">
-				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					<Graph />
-				</div>
-				<div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 mb-4 bg-gray-500">
-					<Table />
-				</div>
-			</div>
- */
