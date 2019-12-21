@@ -2,8 +2,6 @@ import React from 'react'
 import {
 	VictoryLine,
 	VictoryChart,
-	VictoryTheme,
-	VictoryContainer,
 	VictoryAxis,
 	VictoryClipContainer
 } from 'victory'
