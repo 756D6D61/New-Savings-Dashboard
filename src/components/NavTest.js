@@ -9,7 +9,7 @@ import {
 	List,
 	Typography,
 	Divider,
-	IconButton,
+	IconButton
 	//ListItem,
 	//ListItemIcon,
 	//ListItemText,
@@ -155,9 +155,6 @@ export default function MiniDrawer() {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" noWrap>
-						Mini variant drawer
-					</Typography>
 				</Toolbar>
 			</AppBar>
 			<Drawer
