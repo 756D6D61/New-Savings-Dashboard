@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/BudgetIcons'
+import Card from '@material-ui/core/Card'
 
 const Budget = () => {
 	return (
@@ -14,7 +15,9 @@ const Budget = () => {
 				</div>
 				<div class="flex flex-wrap">
 					<div class="w-full mb-4 text-center bg-gray-500">
-						<Icons />
+						<Card>
+							<Icons />
+						</Card>
 					</div>
 				</div>
 			</Suspense>

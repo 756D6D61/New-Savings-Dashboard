@@ -3,6 +3,7 @@ import Page from '../../layout/Page'
 import Table from '../../components/Table'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/CategoryIcons'
+import Card from '@material-ui/core/Card'
 
 const Categories = () => {
 	return (
@@ -15,9 +16,11 @@ const Categories = () => {
 				</div>
 				<div class="flex -mx-2">
 					<div class="w-1/2 px-2 mb-4">
-						<div class="bg-gray-400 text-center h-12">
-							<Icons />
-						</div>
+						<Card>
+							<div class="bg-gray-400 text-center ">
+								<Icons />
+							</div>
+						</Card>
 					</div>
 					<div class="w-1/2 px-2  mb-4">
 						<div class="bg-gray-500 text-center h-12">
