@@ -18,7 +18,6 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import HomeIcon from '@material-ui/icons/Home'
 //import InboxIcon from '@material-ui/icons/MoveToInbox'
 //import MailIcon from '@material-ui/icons/Mail'
 import { Link } from 'react-router-dom'
@@ -26,6 +25,17 @@ import { Link } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Switch, FormControlLabel } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+	faHome,
+	faWallet,
+	faBorderAll,
+	faFileInvoice
+} from '@fortawesome/free-solid-svg-icons'
 
 const themeObject = {
 	palette: {
@@ -184,14 +194,41 @@ export default function MiniDrawer() {
 				<Divider />
 				<List>
 					<Link to="/">
-						<HomeIcon /> Home
+						<ListItem key="Home">
+							<ListItemIcon>
+								<FontAwesomeIcon icon={faHome} />
+							</ListItemIcon>
+							<ListItemText primary="Home" />
+						</ListItem>
+					</Link>
+
+					<br />
+					<Link to="/Budget">
+						<ListItem key="Budget">
+							<ListItemIcon>
+								<FontAwesomeIcon icon={faWallet} />
+							</ListItemIcon>
+							<ListItemText primary="Budget" />
+						</ListItem>
 					</Link>
 					<br />
-					<Link to="/Budget">Budget</Link>
+					<Link to="/Categories">
+						<ListItem key="Categories">
+							<ListItemIcon>
+								<FontAwesomeIcon icon={faBorderAll} />
+							</ListItemIcon>
+							<ListItemText primary="Categories" />
+						</ListItem>
+					</Link>
 					<br />
-					<Link to="/Categories">Categories</Link>
-					<br />
-					<Link to="/AddAccount">Add Account</Link>
+					<Link to="/AddAccount">
+						<ListItem key="AddAccount">
+							<ListItemIcon>
+								<FontAwesomeIcon icon={faFileInvoice} />
+							</ListItemIcon>
+							<ListItemText primary="Add Account" />
+						</ListItem>
+					</Link>
 				</List>
 				<Divider />
 				<FormControlLabel
