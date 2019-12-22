@@ -18,6 +18,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import HomeIcon from '@material-ui/icons/Home'
 //import InboxIcon from '@material-ui/icons/MoveToInbox'
 //import MailIcon from '@material-ui/icons/Mail'
 import { Link } from 'react-router-dom'
@@ -182,7 +183,9 @@ export default function MiniDrawer() {
 				</div>
 				<Divider />
 				<List>
-					<Link to="/">Home</Link>
+					<Link to="/">
+						<HomeIcon /> Home
+					</Link>
 					<br />
 					<Link to="/Budget">Budget</Link>
 					<br />
@@ -198,64 +201,3 @@ export default function MiniDrawer() {
 		</MuiThemeProvider>
 	)
 }
-/*
-{routes.map((data, key) => {
-	return (
-		<Link
-			to={data.path}
-			style={{ textDecoration: 'none' }}
-			key={key}
-		>
-			<ListItem
-				button
-				key={key}
-				component={data.component}
-				to={'/' + data}
-			>
-				<ListItemIcon>
-					<data.icon />
-				</ListItemIcon>
-				<ListItemText primary={data.name} />
-			</ListItem>
-		</Link>
-	)
-})}
- */
-/*{routes.map((text, index) =>
-	(
-		<ListItem
-			button
-			key={text.name}
-			component={text.component}
-			to={text.path}
-		>
-			<ListItemIcon>
-				{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-			</ListItemIcon>
-			<ListItemText primary={text.name} />
-		</ListItem>
-	)
-	)}
-					*/
-
-/*
-{['Budget', 'Starred', 'Send email', 'Drafts'].map(
-						(text, index) => (
-							<ListItem
-								button
-								key={text}
-								component={Link}
-								to={'/' + text}
-							>
-								<ListItemIcon>
-									{index % 2 === 0 ? (
-										<InboxIcon />
-									) : (
-										<MailIcon />
-									)}
-								</ListItemIcon>
-								<ListItemText primary={text} />
-							</ListItem>
-						)
-					)}
- */
