@@ -12,7 +12,7 @@ const Page = ({ route, children }) => {
 		<div class="flex content-between flex-wrap  h-20">
 			<NavTest route={route} />
 
-			<div class="w-full h-2  pl-16">
+			<div class="w-full h-2  pr-10">
 				<Container fixed>{children}</Container>
 			</div>
 		</div>

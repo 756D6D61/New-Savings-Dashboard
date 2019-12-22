@@ -202,7 +202,6 @@ export default function MiniDrawer() {
 						</ListItem>
 					</Link>
 
-					<br />
 					<Link to="/Budget">
 						<ListItem key="Budget">
 							<ListItemIcon>
@@ -211,7 +210,6 @@ export default function MiniDrawer() {
 							<ListItemText primary="Budget" />
 						</ListItem>
 					</Link>
-					<br />
 					<Link to="/Categories">
 						<ListItem key="Categories">
 							<ListItemIcon>
@@ -220,7 +218,6 @@ export default function MiniDrawer() {
 							<ListItemText primary="Categories" />
 						</ListItem>
 					</Link>
-					<br />
 					<Link to="/AddAccount">
 						<ListItem key="AddAccount">
 							<ListItemIcon>
