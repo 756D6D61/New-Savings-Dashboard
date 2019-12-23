@@ -196,7 +196,7 @@ export default function MiniDrawer() {
 					<Link to="/">
 						<ListItem key="Home">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faHome} />
+								<FontAwesomeIcon icon={faHome} size="lg" />
 							</ListItemIcon>
 							<ListItemText primary="Home" />
 						</ListItem>
@@ -205,7 +205,7 @@ export default function MiniDrawer() {
 					<Link to="/Budget">
 						<ListItem key="Budget">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faWallet} />
+								<FontAwesomeIcon icon={faWallet} size="lg" />
 							</ListItemIcon>
 							<ListItemText primary="Budget" />
 						</ListItem>
@@ -213,7 +213,7 @@ export default function MiniDrawer() {
 					<Link to="/Categories">
 						<ListItem key="Categories">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faBorderAll} />
+								<FontAwesomeIcon icon={faBorderAll} size="lg" />
 							</ListItemIcon>
 							<ListItemText primary="Categories" />
 						</ListItem>
@@ -221,7 +221,10 @@ export default function MiniDrawer() {
 					<Link to="/AddAccount">
 						<ListItem key="AddAccount">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faFileInvoice} />
+								<FontAwesomeIcon
+									icon={faFileInvoice}
+									size="lg"
+								/>
 							</ListItemIcon>
 							<ListItemText primary="Add Account" />
 						</ListItem>
