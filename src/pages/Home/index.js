@@ -9,7 +9,7 @@ import {
 	faHeart,
 	faSuitcaseRolling,
 	faHome,
-	faSortUp
+	faCaretUp
 } from '@fortawesome/free-solid-svg-icons'
 const Home = ({ route }) => {
 	return (
@@ -23,8 +23,11 @@ const Home = ({ route }) => {
 								<br />
 								£20,029
 								<br />
-								<FontAwesomeIcon icon={faSortUp} size="lg" /> 2%
-								from last 7 days
+								<FontAwesomeIcon
+									icon={faCaretUp}
+									size="lg"
+								/>{' '}
+								2% from last 7 days
 							</div>
 						</Card>
 					</div>
