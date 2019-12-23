@@ -25,12 +25,13 @@ const Home = ({ route }) => {
 										<p class="text-xl">£20,029</p>
 									</div>
 									<div class="w-1/2">
-									<p class="text-base">
-										<FontAwesomeIcon
-											icon={faCaretUp}
-											size="lg"
-											color="green"
-										/>2% from last 7 days
+										<p class="text-base">
+											<FontAwesomeIcon
+												icon={faCaretUp}
+												size="lg"
+												color="green"
+											/>{' '}
+											2% from last 7 days
 										</p>
 									</div>
 								</div>

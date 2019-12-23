@@ -76,7 +76,9 @@ const useStyles = makeStyles(theme => ({
 		transition: theme.transitions.create(['width', 'margin'], {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen
-		})
+		}),
+		color: 'gray',
+		backgroundColor: 'white'
 	},
 	appBarShift: {
 		marginLeft: drawerWidth,
@@ -115,12 +117,12 @@ const useStyles = makeStyles(theme => ({
 			width: theme.spacing(9) + 1
 		}
 	},
+
 	toolbar: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		padding: theme.spacing(0, 1),
-		...theme.mixins.toolbar
+		padding: theme.spacing(0, 1)
 	},
 	content: {
 		flexGrow: 1,
