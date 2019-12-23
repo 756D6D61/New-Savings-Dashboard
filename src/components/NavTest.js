@@ -77,7 +77,7 @@ const useStyles = makeStyles(theme => ({
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen
 		}),
-		color: 'gray',
+		color: 'blue',
 		backgroundColor: 'white'
 	},
 	appBarShift: {
@@ -170,6 +170,7 @@ export default function MiniDrawer() {
 					</IconButton>
 				</Toolbar>
 			</AppBar>
+			<Divider />
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
@@ -198,7 +199,11 @@ export default function MiniDrawer() {
 					<Link to="/">
 						<ListItem key="Home">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faHome} size="lg" />
+								<FontAwesomeIcon
+									icon={faHome}
+									size="lg"
+									color="blue"
+								/>
 							</ListItemIcon>
 							<ListItemText primary="Home" />
 						</ListItem>
@@ -207,7 +212,11 @@ export default function MiniDrawer() {
 					<Link to="/Budget">
 						<ListItem key="Budget">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faWallet} size="lg" />
+								<FontAwesomeIcon
+									icon={faWallet}
+									size="lg"
+									color="blue"
+								/>
 							</ListItemIcon>
 							<ListItemText primary="Budget" />
 						</ListItem>
@@ -215,7 +224,11 @@ export default function MiniDrawer() {
 					<Link to="/Categories">
 						<ListItem key="Categories">
 							<ListItemIcon>
-								<FontAwesomeIcon icon={faBorderAll} size="lg" />
+								<FontAwesomeIcon
+									icon={faBorderAll}
+									size="lg"
+									color="blue"
+								/>
 							</ListItemIcon>
 							<ListItemText primary="Categories" />
 						</ListItem>
@@ -226,6 +239,7 @@ export default function MiniDrawer() {
 								<FontAwesomeIcon
 									icon={faFileInvoice}
 									size="lg"
+									color="blue"
 								/>
 							</ListItemIcon>
 							<ListItemText primary="Add Account" />

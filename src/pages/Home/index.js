@@ -18,8 +18,9 @@ const Home = ({ route }) => {
 				<div class="flex -mx-2 text-center">
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
-							<div class="bg-gray-400">
-								<p class="text-2xl">Budgets</p>
+							<div>
+								<p class="text-2xl text-blue-base">Budgets</p>
+								<hr />
 								<div class="flex  h-10">
 									<div class="w-1/2">
 										<p class="text-xl">£20,029</p>
@@ -40,8 +41,11 @@ const Home = ({ route }) => {
 					</div>
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
-							<div class="bg-gray-500 text-center">
-								<p class="text-2xl">Categories</p>
+							<div class="text-center">
+								<p class="text-2xl text-blue-base">
+									Categories
+								</p>
+								<hr />
 								<div class="flex">
 									<div class="w-1/4">
 										<FontAwesomeIcon
