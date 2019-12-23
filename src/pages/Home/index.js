@@ -18,66 +18,60 @@ const Home = ({ route }) => {
 				<div class="flex -mx-2 text-center">
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
-							<div>
-								<p class="text-2xl text-blue-base">Budgets</p>
-								<hr />
-								<div class="flex  h-10">
-									<div class="w-1/2">
-										<p class="text-xl">£20,029</p>
-									</div>
-									<div class="w-1/2">
-										<p class="text-base">
-											<FontAwesomeIcon
-												icon={faCaretUp}
-												size="lg"
-												color="green"
-											/>{' '}
-											2% from last 7 days
-										</p>
-									</div>
+							<p class="text-2xl text-blue-base">Budgets</p>
+							<hr />
+							<div class="flex  h-10">
+								<div class="w-1/2">
+									<p class="text-xl">£20,029</p>
+								</div>
+								<div class="w-1/2">
+									<p class="text-base">
+										<FontAwesomeIcon
+											icon={faCaretUp}
+											size="lg"
+											color="green"
+										/>{' '}
+										2% from last 7 days
+									</p>
 								</div>
 							</div>
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
-							<div class="text-center">
-								<p class="text-2xl text-blue-base">
-									Categories
-								</p>
-								<hr />
-								<div class="flex">
-									<div class="w-1/4">
-										<FontAwesomeIcon
-											icon={faBirthdayCake}
-										/>
-										<br />
-										£1,203
-									</div>
-									<div class="w-1/4">
-										<FontAwesomeIcon icon={faHeart} />
-										<br />
-										£6,201
-									</div>
-									<div class="w-1/4">
-										<FontAwesomeIcon
-											icon={faSuitcaseRolling}
-										/>
-										<br />
-										£4,201
-									</div>
-									<div class="w-1/4">
-										<FontAwesomeIcon icon={faHome} />
-										<br />
-										£450
-									</div>
+							<p class="text-2xl text-blue-base">Categories</p>
+							<hr />
+							<div class="flex">
+								<div class="w-1/4">
+									<FontAwesomeIcon icon={faBirthdayCake} />
+									<br />
+									£1,203
+								</div>
+								<div class="w-1/4">
+									<FontAwesomeIcon icon={faHeart} />
+									<br />
+									£6,201
+								</div>
+								<div class="w-1/4">
+									<FontAwesomeIcon icon={faSuitcaseRolling} />
+									<br />
+									£4,201
+								</div>
+								<div class="w-1/4">
+									<FontAwesomeIcon icon={faHome} />
+									<br />
+									£450
 								</div>
 							</div>
 						</Card>
 					</div>
-					<div class="w-1/3 px-2  mb-4">
+					<div class="w-1/3 px-2  mb-4 ">
 						<Card>
-							<div class="bg-gray-400 h-12">test</div>
+							<p class="text-2xl text-blue-base">Misc.</p>
+							<hr />
+							<div class="flex  h-10">
+								<p class="text-center">data here</p>
+							</div>
 						</Card>
 					</div>
 				</div>
