@@ -17,60 +17,90 @@ const BudgetIcons = () => {
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faHeadphonesAlt} />
+					<br />
 					Music
+					<hr />
+					£1,769
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faPhone} />
+					<br />
 					Phone
+					<hr />
+					£102
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
-					<FontAwesomeIcon icon={faHeartbeat} /> Health
+					<FontAwesomeIcon icon={faHeartbeat} />
+					<br />
+					Health
+					<hr />
+					£2,102
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
-					<FontAwesomeIcon icon={faShoppingBag} /> Shopping
+					<FontAwesomeIcon icon={faShoppingBag} />
+					<br />
+					Shopping
+					<hr />
+					£1,918
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faShieldAlt} />
+					<br />
 					Security
+					<hr />
+					£820
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faGamepad} />
+					<br />
 					Gaming
+					<hr />
+					£306
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faWifi} />
+					<br />
 					Internet
+					<hr />
+					£206
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faHome} />
+					<br />
 					Home
+					<hr />
+					£1,204
 				</button>
 			</div>
 
 			<div class="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
-					<FontAwesomeIcon icon={faReceipt} /> Misc.
+					<FontAwesomeIcon icon={faReceipt} />
+					<br />
+					Misc.
+					<hr />
+					£156
 				</button>
 			</div>
 		</div>
