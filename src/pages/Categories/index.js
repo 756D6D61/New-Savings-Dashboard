@@ -10,14 +10,14 @@ const Categories = () => {
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
 				<div class="flex flex-wrap">
-					<div class="w-full text-center mb-4 bg-gray-500">
+					<div class="w-full text-center mb-4">
 						<AddButton>Categories</AddButton>
 					</div>
 				</div>
 				<div class="flex -mx-2">
 					<div class="w-1/2 px-2 mb-4">
 						<Card>
-							<div class="bg-gray-400 text-center ">
+							<div class="text-center ">
 								<Icons />
 							</div>
 						</Card>

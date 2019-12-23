@@ -9,12 +9,12 @@ const Budget = () => {
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
 				<div class="flex flex-wrap">
-					<div class="w-full  mb-4 text-center bg-gray-500">
+					<div class="w-full  mb-4 text-center">
 						<AddButton>Budget</AddButton>
 					</div>
 				</div>
 				<div class="flex flex-wrap">
-					<div class="w-full mb-4 text-center bg-gray-500">
+					<div class="w-full mb-4 text-center">
 						<Card>
 							<Icons />
 						</Card>
