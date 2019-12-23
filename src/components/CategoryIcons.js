@@ -12,28 +12,40 @@ const CategoryIcons = () => {
 			<div class="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
 				<button class="text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20 border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faBirthdayCake} />
+					<br />
 					Birthday
+					<hr />
+					£1,002
 				</button>
 			</div>
 
 			<div class="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20  border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faHeart} />
+					<br />
 					Wedding
+					<hr />
+					£21,342
 				</button>
 			</div>
 
 			<div class="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20  border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faSuitcaseRolling} />
+					<br />
 					Holiday
+					<hr />
+					£3,010
 				</button>
 			</div>
 
 			<div class="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
 				<button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white h-20 w-20  border border-blue-500 hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faHome} />
+					<br />
 					Home
+					<hr />
+					£12,185
 				</button>
 			</div>
 		</div>
