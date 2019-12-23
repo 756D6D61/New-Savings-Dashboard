@@ -11,6 +11,7 @@ import {
 	faHome,
 	faReceipt
 } from '@fortawesome/free-solid-svg-icons'
+
 const BudgetIcons = () => {
 	return (
 		<div class="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
