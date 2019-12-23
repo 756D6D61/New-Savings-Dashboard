@@ -15,27 +15,33 @@ const Home = ({ route }) => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
-				<div class="flex -mx-2">
+				<div class="flex -mx-2 text-center">
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<div class="bg-gray-400">
-								Budgets
-								<br />
-								£20,029
-								<br />
-								<FontAwesomeIcon
-									icon={faCaretUp}
-									size="lg"
-								/>{' '}
-								2% from last 7 days
+								<p class="text-2xl">Budgets</p>
+								<div class="flex  h-10">
+									<div class="w-1/2">
+										<p class="text-xl">£20,029</p>
+									</div>
+									<div class="w-1/2">
+									<p class="text-base">
+										<FontAwesomeIcon
+											icon={faCaretUp}
+											size="lg"
+											color="green"
+										/>2% from last 7 days
+										</p>
+									</div>
+								</div>
 							</div>
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<div class="bg-gray-500 text-center">
-								Categories
-								<div class="flex ">
+								<p class="text-2xl">Categories</p>
+								<div class="flex">
 									<div class="w-1/4">
 										<FontAwesomeIcon
 											icon={faBirthdayCake}
