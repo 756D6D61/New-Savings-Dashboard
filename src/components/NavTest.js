@@ -2,26 +2,18 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import {
 	makeStyles,
-	//useTheme,
 	Drawer,
 	AppBar,
 	Toolbar,
 	List,
-	Typography,
 	Divider,
 	IconButton
-	//ListItem,
-	//ListItemIcon,
-	//ListItemText,
-	//Container
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-//import InboxIcon from '@material-ui/icons/MoveToInbox'
-//import MailIcon from '@material-ui/icons/Mail'
+
 import { Link } from 'react-router-dom'
-//import routes from '../config/routes'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Switch, FormControlLabel } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -150,27 +142,6 @@ export default function MiniDrawer() {
 		<MuiThemeProvider theme={themeConfig}>
 			<CssBaseline />
 
-			<AppBar
-				position="fixed"
-				className={clsx(classes.appBar, {
-					[classes.appBarShift]: open
-				})}
-			>
-				<Toolbar>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerOpen}
-						edge="start"
-						className={clsx(classes.menuButton, {
-							[classes.hide]: open
-						})}
-					>
-						<MenuIcon />
-					</IconButton>
-				</Toolbar>
-			</AppBar>
-			<Divider />
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
@@ -185,6 +156,17 @@ export default function MiniDrawer() {
 				}}
 				open={open}
 			>
+				<IconButton
+					color="inherit"
+					aria-label="open drawer"
+					onClick={handleDrawerOpen}
+					edge="start"
+					className={clsx(classes.menuButton, {
+						[classes.hide]: open
+					})}
+				>
+					<MenuIcon />
+				</IconButton>
 				<div className={classes.toolbar}>
 					<IconButton onClick={handleDrawerClose}>
 						{theme.direction === 'rtl' ? (
@@ -194,7 +176,6 @@ export default function MiniDrawer() {
 						)}
 					</IconButton>
 				</div>
-				<Divider />
 				<List>
 					<Link to="/">
 						<ListItem key="Home">
