@@ -8,7 +8,7 @@ const propTypes = {
 
 const Page = ({ route, children }) => {
 	return (
-		<div class="flex content-between flex-wrap  h-20">
+		<div class="flex content-between flex-wrap  h-5">
 			<NavTest route={route} />
 			<div class="w-full h-2  pl-20 pr-2">{children}</div>
 		</div>

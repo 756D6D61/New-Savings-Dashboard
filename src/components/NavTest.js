@@ -29,6 +29,8 @@ import {
 	faFileInvoice
 } from '@fortawesome/free-solid-svg-icons'
 
+import classNames from 'classnames'
+
 const themeObject = {
 	palette: {
 		primary: { main: '#053f5b' },
@@ -63,25 +65,9 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		display: 'flex'
 	},
-	appBar: {
-		zIndex: theme.zIndex.drawer + 1,
-		transition: theme.transitions.create(['width', 'margin'], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen
-		}),
-		color: '#ADFFE9',
-		backgroundColor: '#B2B2B2'
-	},
-	appBarShift: {
-		marginLeft: drawerWidth,
-		width: `calc(100% - ${drawerWidth}px)`,
-		transition: theme.transitions.create(['width', 'margin'], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen
-		})
-	},
+
 	menuButton: {
-		marginRight: 36
+		marginRight: 0
 	},
 	hide: {
 		display: 'none'
@@ -90,6 +76,9 @@ const useStyles = makeStyles(theme => ({
 		width: drawerWidth,
 		flexShrink: 0,
 		whiteSpace: 'nowrap'
+	},
+	drawerPaper: {
+		background: '#4518BB'
 	},
 	drawerOpen: {
 		width: drawerWidth,
@@ -149,7 +138,7 @@ export default function MiniDrawer() {
 					[classes.drawerClose]: !open
 				})}
 				classes={{
-					paper: clsx({
+					paper: classNames(classes.drawerPaper, {
 						[classes.drawerOpen]: open,
 						[classes.drawerClose]: !open
 					})
@@ -183,7 +172,7 @@ export default function MiniDrawer() {
 								<FontAwesomeIcon
 									icon={faHome}
 									size="lg"
-									color="blue"
+									color="white"
 								/>
 							</ListItemIcon>
 							<ListItemText primary="Home" />
@@ -196,7 +185,7 @@ export default function MiniDrawer() {
 								<FontAwesomeIcon
 									icon={faWallet}
 									size="lg"
-									color="blue"
+									color="white"
 								/>
 							</ListItemIcon>
 							<ListItemText primary="Budget" />
@@ -208,7 +197,7 @@ export default function MiniDrawer() {
 								<FontAwesomeIcon
 									icon={faBorderAll}
 									size="lg"
-									color="blue"
+									color="white"
 								/>
 							</ListItemIcon>
 							<ListItemText primary="Categories" />
@@ -220,7 +209,7 @@ export default function MiniDrawer() {
 								<FontAwesomeIcon
 									icon={faFileInvoice}
 									size="lg"
-									color="blue"
+									color="white"
 								/>
 							</ListItemIcon>
 							<ListItemText primary="Add Account" />
