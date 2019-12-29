@@ -35,7 +35,10 @@ const themeObject = {
 	palette: {
 		primary: { main: '#053f5b' },
 		secondary: { main: '#5e3c6f' },
-		type: 'light'
+		type: 'light',
+		background: {
+			default: "#FBFCFD"
+		}
 	},
 	themeName: 'Dark Theme'
 }
@@ -66,6 +69,7 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		background: '#FBFCFD'
 	},
+
 	menuButton: {
 		marginRight: 0
 	},
@@ -129,6 +133,8 @@ export default function MiniDrawer() {
 	const themeConfig = createMuiTheme(theme)
 	return (
 		<MuiThemeProvider theme={themeConfig}>
+			<CssBaseline />
+
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
