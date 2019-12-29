@@ -3,23 +3,23 @@ import clsx from 'clsx'
 import {
 	makeStyles,
 	Drawer,
-	AppBar,
-	Toolbar,
 	List,
 	Divider,
-	IconButton
+	IconButton,
+	ListItem,
+	ListItemIcon,
+	ListItemText,
+	Switch,
+	FormControlLabel
 } from '@material-ui/core'
+
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 import { Link } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { Switch, FormControlLabel } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -37,10 +37,10 @@ const themeObject = {
 		secondary: { main: '#5e3c6f' },
 		type: 'light',
 		background: {
-			default: "#FBFCFD"
+			default: '#FBFCFD'
 		}
 	},
-	themeName: 'Dark Theme'
+	themeName: 'Light Theme'
 }
 
 const useDarkMode = () => {
@@ -66,8 +66,7 @@ const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
 	root: {
-		display: 'flex',
-		background: '#FBFCFD'
+		display: 'flex'
 	},
 
 	menuButton: {
@@ -108,10 +107,6 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center',
 		justifyContent: 'flex-end',
 		padding: theme.spacing(0, 1)
-	},
-	content: {
-		flexGrow: 1,
-		padding: theme.spacing(3)
 	}
 }))
 
