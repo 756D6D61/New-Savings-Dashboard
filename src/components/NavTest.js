@@ -63,9 +63,9 @@ const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
 	root: {
-		display: 'flex'
+		display: 'flex',
+		background: '#FBFCFD'
 	},
-
 	menuButton: {
 		marginRight: 0
 	},
@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
 		whiteSpace: 'nowrap'
 	},
 	drawerPaper: {
-		background: '#4518BB'
+		background: '#371dca'
 	},
 	drawerOpen: {
 		width: drawerWidth,
@@ -129,8 +129,6 @@ export default function MiniDrawer() {
 	const themeConfig = createMuiTheme(theme)
 	return (
 		<MuiThemeProvider theme={themeConfig}>
-			<CssBaseline />
-
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
