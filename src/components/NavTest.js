@@ -33,8 +33,8 @@ import classNames from 'classnames'
 
 const themeObject = {
 	palette: {
-		primary: { main: '#053f5b' },
-		secondary: { main: '#5e3c6f' },
+		primary: { main: '#fff' },
+		secondary: { main: '#fff' },
 		type: 'light',
 		background: {
 			default: '#FBFCFD'

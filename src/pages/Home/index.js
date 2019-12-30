@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
-import AltGraph from '../../components/AltGraph'
+import AltGraph from '../../components/Graph'
 import Table from '../../components/Table'
 import Card from '@material-ui/core/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
