@@ -10,7 +10,8 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Switch,
-	FormControlLabel
+	FormControlLabel,
+	Backdrop
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -95,7 +96,11 @@ const useStyles = makeStyles(theme => ({
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.enteringScreen
-		})
+		}),
+		Backdrop: {
+			zIndex: theme.zIndex.drawer + 1,
+			color: '#000'
+		}
 	},
 	drawerClose: {
 		transition: theme.transitions.create('width', {
@@ -106,6 +111,10 @@ const useStyles = makeStyles(theme => ({
 		width: theme.spacing(7) + 1,
 		[theme.breakpoints.up('sm')]: {
 			width: theme.spacing(9) + 1
+		},
+		backdrop: {
+			zIndex: theme.zIndex.drawer + 1,
+			color: '#000'
 		}
 	},
 
@@ -150,6 +159,7 @@ export default function MiniDrawer() {
 					})
 				}}
 				open={open}
+				Backdrop
 			>
 				<IconButton
 					color="inherit"
