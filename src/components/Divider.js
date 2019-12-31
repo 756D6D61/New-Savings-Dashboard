@@ -1,6 +1,4 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 
 const propTypes = {
@@ -8,19 +6,7 @@ const propTypes = {
 }
 
 const Divider = ({ children }) => {
-	return (
-		<div>
-			<div>
-				<Grid container alignItems="center">
-					<Typography gutterBottom variant="h4">
-						{children}
-					</Typography>
-				</Grid>
-			</div>
-			<hr />
-			<br />
-		</div>
-	)
+	return <div class="bg-white shadow w-full pl-0 text-4xl">{children}</div>
 }
 
 Divider.propTypes = propTypes

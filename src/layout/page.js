@@ -11,8 +11,12 @@ const Page = ({ route, children }) => {
 	return (
 		<div class="flex content-between flex-wrap  h-5">
 			<NavTest route={route} />
-			<div class="w-full h-2  pl-20 pr-2">
+			<div class="w-full pl-20 -ml-1 ">
 				<Divider>Savings Dashboard</Divider>
+			</div>
+
+			<div class="w-full h-5  pl-20 pr-2">
+				<br />
 				{children}
 			</div>
 		</div>
