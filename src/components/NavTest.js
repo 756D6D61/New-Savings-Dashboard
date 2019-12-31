@@ -34,7 +34,7 @@ import classNames from 'classnames'
 const themeObject = {
 	palette: {
 		primary: { main: '#371dca' },
-		secondary: { main: '#000' },
+		secondary: { main: '#fff' },
 		type: 'light',
 
 		contrastThreshold: 3,
