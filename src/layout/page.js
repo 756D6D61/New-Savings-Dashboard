@@ -12,10 +12,7 @@ const Page = ({ route, children }) => {
 		<div class="flex content-between flex-wrap  h-5">
 			<NavTest route={route} />
 			<div class="w-full h-2  pl-20 pr-2">
-				<Divider>
-					Savings Dashboard
-					<br /> Home
-				</Divider>
+				<Divider>Savings Dashboard</Divider>
 				{children}
 			</div>
 		</div>
