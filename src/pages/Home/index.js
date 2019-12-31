@@ -3,6 +3,8 @@ import Page from '../../layout/Page'
 import AltGraph from '../../components/Graph'
 import Table from '../../components/Table'
 import Card from '@material-ui/core/Card'
+import SubDivider from '../../components/SubDivider'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faBirthdayCake,
@@ -15,6 +17,8 @@ const Home = ({ route }) => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
+				<SubDivider>Testing</SubDivider>
+				<br />
 				<div class="flex -mx-2 text-center">
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
