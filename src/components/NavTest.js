@@ -33,9 +33,12 @@ import classNames from 'classnames'
 
 const themeObject = {
 	palette: {
-		primary: { main: '#fff' },
-		secondary: { main: '#fff' },
+		primary: { main: '#371dca' },
+		secondary: { main: '#000' },
 		type: 'light',
+
+		contrastThreshold: 3,
+		tonalOffset: 0.2,
 		background: {
 			default: '#FBFCFD'
 		}
@@ -54,7 +57,10 @@ const useDarkMode = () => {
 			...theme,
 			palette: {
 				...theme.palette,
-				type: type === 'light' ? 'dark' : 'light'
+				type: type === 'light' ? 'dark' : 'light',
+				background: {
+					default: type === 'light' ? '#000' : '#FBFCFD'
+				}
 			}
 		}
 		setTheme(updatedTheme)
@@ -66,7 +72,8 @@ const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
 	root: {
-		display: 'flex'
+		display: 'flex',
+		backgroundColor: theme.palette.background.paper
 	},
 
 	menuButton: {
