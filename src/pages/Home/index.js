@@ -17,7 +17,7 @@ const Home = ({ route }) => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
-				<SubDivider>Testing</SubDivider>
+				<SubDivider>Home</SubDivider>
 				<br />
 				<div class="flex -mx-2 text-center">
 					<div class="w-1/3 px-2  mb-4">

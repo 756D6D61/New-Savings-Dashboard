@@ -7,7 +7,7 @@ const propTypes = {
 
 const SubDivider = ({ children }) => {
 	return (
-		<div class="bg-white w-full -mt-5 z-0 pl-0 text-xl">
+		<div class="bg-white w-full -mt-5 z-0 font-light pl-0 text-xl">
 			{children}
 			<hr />
 		</div>

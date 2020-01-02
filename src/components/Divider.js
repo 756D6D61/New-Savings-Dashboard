@@ -7,7 +7,7 @@ const propTypes = {
 
 const Divider = ({ children }) => {
 	return (
-		<div class="z-10 bg-white shadow w-full pl-0 text-4xl">{children}</div>
+		<div class="z-10 bg-white shadow w-full pl-0 text-4xl font-bold">{children}</div>
 	)
 }
 
