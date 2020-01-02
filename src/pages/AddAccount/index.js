@@ -2,11 +2,14 @@ import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
 import AccForm from '../../components/Form'
 import Card from '@material-ui/core/Card'
+import SubDivider from '../../components/SubDivider'
 
 const AddAccount = () => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
+				<SubDivider>Add Account </SubDivider>
+				<br />
 				<div class="w-full ">
 					<Card>
 						<div class="border-r border-b border-l border-gray-400  lg:border-t  bg-white rounded-b lg:rounded-r  lg:rounded-b p-4 flex flex-col justify-between leading-normal">

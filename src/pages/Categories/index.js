@@ -4,11 +4,14 @@ import Table from '../../components/Table'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/CategoryIcons'
 import Card from '@material-ui/core/Card'
+import SubDivider from '../../components/SubDivider'
 
 const Categories = () => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
+				<SubDivider>Categories</SubDivider>
+				<br />
 				<div class="flex flex-wrap">
 					<div class="w-full text-center mb-4">
 						<AddButton>Categories</AddButton>
