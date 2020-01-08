@@ -26,4 +26,4 @@ This dashboard shows mock data that is computed via a fake server. The data show
 -   Allow the user to view details of each budget and category
 -   Styling issues
 
-`**THIS PROJECT IS IN WORKING IN PROGRESS**`
+`**THIS PROJECT IS IN WORKING PROGRESS**`
