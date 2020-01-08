@@ -25,3 +25,5 @@ This dashboard shows mock data that is computed via a fake server. The data show
 
 -   Allow the user to view details of each budget and category
 -   Styling issues
+
+**THIS PROJECT IS STILL A WORK IN PROGRESS**
