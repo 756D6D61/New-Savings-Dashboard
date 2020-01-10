@@ -5,7 +5,7 @@ export default (state = initalState, action) => {
 		case 'GET_DATA':
 			return {
 				...state,
-				getSavingsData: action.payload
+				getData: action.payload
 			}
 		default:
 			return state

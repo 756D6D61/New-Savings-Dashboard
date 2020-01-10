@@ -12,7 +12,7 @@ export const get_data = payload => {
 
 export const categoryData = cateogry => {
 	return function(dispatch) {
-		const url = `${URL}+cateogry`
+		const url = `${URL}+${cateogry}`
 		axios
 			.get(url)
 			.then(function(res) {
