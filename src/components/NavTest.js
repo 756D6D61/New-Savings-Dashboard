@@ -10,8 +10,7 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Switch,
-	FormControlLabel,
-	Backdrop
+	FormControlLabel
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -159,7 +158,6 @@ export default function MiniDrawer() {
 					})
 				}}
 				open={open}
-				Backdrop
 			>
 				<IconButton
 					color="inherit"
