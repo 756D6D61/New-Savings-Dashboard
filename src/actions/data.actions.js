@@ -17,6 +17,7 @@ export const categoryData = cateogry => {
 			.get(url)
 			.then(function(res) {
 				dispatch(get_data(res.data))
+				console.log(res.data)
 			})
 			.catch(function(err) {
 				console.log(err)
