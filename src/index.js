@@ -7,8 +7,13 @@ import './styles/tailwind.css'
 import { renderRoutes } from 'react-router-config'
 import routes from './config/routes'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import configureStore from './store'
+
 ReactDOM.render(
-	<BrowserRouter>{renderRoutes(routes)}</BrowserRouter>,
+	<Provider store={configureStore()}>
+		<BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
+	</Provider>,
 	document.getElementById('root')
 )
 
