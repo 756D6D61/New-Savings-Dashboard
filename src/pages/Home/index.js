@@ -18,6 +18,10 @@ import {
 import { connect } from 'react-redux';
 import { budgetData, categoryData } from '../../actions/dataAction';
 
+
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
 const mapStateToProps = state => ({
     ...state
 })
@@ -27,17 +31,21 @@ const mapDispatchToProps = dispatch => ({
 	categoryData: () => dispatch(categoryData())
 })
 
-const budget = () => {
+/*const budget = () => {
 	this.props.budgetData();
 }
 
 const category = () => {
 	this.props.categoryData()
-}
+}*/
 
 const Home = ({ route }) => {
-console.log(budget)
-console.log(category)
+//console.log(this.props.budget)
+const counter = useSelector(state => state);
+console.log(counter)
+const dispatch = useDispatch();
+console.log(counter.DATA_BUDGET)
+console.log(dispatch({type: 'DATA_BUDGET'}))
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
@@ -50,7 +58,7 @@ console.log(category)
 							<hr />
 							<div class="flex  h-10">
 								<div class="w-1/2">
-									<p class="text-xl">£20,029</p>
+									<p class="text-xl">£20,029{counter.DATA_BUDGET}</p>
 								</div>
 								<div class="w-1/2">
 									<p class="text-base">
@@ -118,4 +126,4 @@ console.log(category)
 	)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home
