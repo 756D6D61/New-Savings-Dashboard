@@ -23,7 +23,6 @@ export const categoryData = cateogry => {
 		axios.get(url)
 			.then(function(res) {
 				dispatch(category_data(res.data))
-				console.log('dfgdfg')
 			})
 			.catch(function(err) {
 				console.log(err)
@@ -38,7 +37,7 @@ export const budgetData = budget => {
 		axios.get(url)
 			.then(function(res) {
 				dispatch(budget_data(res.data))
-				console.log(budget_data(res.data))
+				console.log(res.data)
 			})
 			.catch(function(err) {
 				console.log(err)

@@ -13,7 +13,31 @@ import {
 	faHome,
 	faCaretUp
 } from '@fortawesome/free-solid-svg-icons'
+
+
+import { connect } from 'react-redux';
+import { budgetData, categoryData } from '../../actions/dataAction';
+
+const mapStateToProps = state => ({
+    ...state
+})
+
+const mapDispatchToProps = dispatch => ({
+	budgetData: () => dispatch(budgetData()),
+	categoryData: () => dispatch(categoryData())
+})
+
+const budget = () => {
+	this.props.budgetData();
+}
+
+const category = () => {
+	this.props.categoryData()
+}
+
 const Home = ({ route }) => {
+console.log(budget)
+console.log(category)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
@@ -94,4 +118,4 @@ const Home = ({ route }) => {
 	)
 }
 
-export default Home
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

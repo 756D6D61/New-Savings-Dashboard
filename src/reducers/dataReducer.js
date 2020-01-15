@@ -1,4 +1,5 @@
-export default (state = {}, action) => {
+const initalState = {}
+export default (state = initalState, action) => {
 	switch (action.type) {
 		case 'CATEGORY_DATA':
 			return {
