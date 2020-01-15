@@ -16,7 +16,7 @@ import {
 
 
 import { connect } from 'react-redux';
-import { budgetData, categoryData } from '../../actions/dataAction';
+import { budgetData, categoryData } from '../../store/actions/data.actions';
 
 
 import { useSelector } from "react-redux";
@@ -46,6 +46,8 @@ console.log(counter)
 const dispatch = useDispatch();
 console.log(counter.DATA_BUDGET)
 console.log(dispatch({type: 'DATA_BUDGET'}))
+console.log(counter.budget)
+console.log(counter.dataReducer)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>

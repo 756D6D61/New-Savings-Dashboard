@@ -1,7 +1,8 @@
 import axios from 'axios'
-import { BUDGET_DATA, CATEGORY_DATA } from './constants'
+import { BUDGET_DATA, CATEGORY_DATA } from '../types'
 const URL =
 	'https://bejicmji8c.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by='
+
 
 export const budget_data = payload => {
 	return {
@@ -19,28 +20,31 @@ export const category_data = payload => {
 
 export const categoryData = cateogry => {
 	return function(dispatch) {
-		const url = `${URL}+${cateogry}`
-		axios.get(url)
-			.then(function(res) {
+		const url = `${URL}+cateogry`
+		fetch(url, { method: 'GET' })
+			.then(res => {
+				return res.json()
+			})
+			.then(res => {
 				dispatch(category_data(res.data))
+				console.log(dispatch(category_data(res.data)))
 			})
-			.catch(function(err) {
-				console.log(err)
-			})
+
 	}
 }
 
 export const budgetData = budget => {
 	return function(dispatch) {
-		const url = `${URL}+${budget}`
+		const url = `${URL}+budget`
 		console.log(url)
-		axios.get(url)
+		fetch(url, { method: 'GET' })
+		.then(res => {
+			return res.json()
+		})
 			.then(function(res) {
 				dispatch(budget_data(res.data))
-				console.log(res.data)
+				console.log(dispatch(budget_data(res.data)))
 			})
-			.catch(function(err) {
-				console.log(err)
-			})
+
 	}
 }
