@@ -1,14 +1,30 @@
-export default (state = {}, action) => {
+import * as types from '../types'
+
+const initialState = {
+	budget: {
+		data: [],
+		loading: false
+	},
+	category: {
+		data: [],
+		loading: false
+	}
+}
+export default (state = initialState, action) => {
 	switch (action.type) {
-		case 'CATEGORY_DATA':
+		case types.CATEGORY_DATA:
 			return {
-				...state,
-				categoryData: action.payload
+				category: {
+					...state.category,
+					loading: true
+				}
 			}
-		case 'BUDGET_DATA':
+		case types.BUDGET_DATA:
 		return {
-			...state,
-			budgetData: action.payload
+			budget: {
+				...state.budget,
+				loading: true
+			}
 		}
 		default:
 			return state
