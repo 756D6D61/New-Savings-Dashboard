@@ -8,7 +8,6 @@ export const budgetData = () => dispatch => {
 		type: types.BUDGET_DATA,
 		paylod: Promise.all(
 			fetch(URL_BUDGET).then(res => res.json())
-
 		)
 	})
 }

@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState, useEffect } from 'react'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/Graph'
 import Table from '../../components/Table'
 import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/SubDivider'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faBirthdayCake,
@@ -14,40 +13,15 @@ import {
 	faCaretUp
 } from '@fortawesome/free-solid-svg-icons'
 
-
-import { connect } from 'react-redux';
-import { budgetData, categoryData } from '../../store/actions/data.actions';
-
-
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-
-const mapStateToProps = state => ({
-    ...state
-})
-
-const mapDispatchToProps = dispatch => ({
-	budgetData: () => dispatch(budgetData()),
-	categoryData: () => dispatch(categoryData())
-})
-
-/*const budget = () => {
-	this.props.budgetData();
-}
-
-const category = () => {
-	this.props.categoryData()
-}*/
+import {data} from '../../store/reducers/'
+import { useSelector, useDispatch } from 'react-redux';
+import * as types from '../../store/types'
 
 const Home = ({ route }) => {
-//console.log(this.props.budget)
-const counter = useSelector(state => state);
-console.log(counter)
-const dispatch = useDispatch();
-console.log(counter.DATA_BUDGET)
-console.log(dispatch({type: 'DATA_BUDGET'}))
-console.log(counter.budget)
-console.log(counter.dataReducer)
+	const categoriesData = useSelector(state => state.data);
+	const dispatch = useDispatch()
+	console.log(dispatch({type:  types.CATEGORY_DATA}))
+	console.log(categoriesData)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
@@ -60,7 +34,7 @@ console.log(counter.dataReducer)
 							<hr />
 							<div class="flex  h-10">
 								<div class="w-1/2">
-									<p class="text-xl">£20,029{counter.DATA_BUDGET}</p>
+									<p class="text-xl">£20,029</p>
 								</div>
 								<div class="w-1/2">
 									<p class="text-base">
@@ -71,6 +45,7 @@ console.log(counter.dataReducer)
 										/>{' '}
 										2% from last 7 days
 									</p>
+
 								</div>
 							</div>
 						</Card>
@@ -122,6 +97,9 @@ console.log(counter.dataReducer)
 					<div class="w-1/2 px-2  mb-4">
 						<Table />
 					</div>
+					<button onClick={() => {
+										console.log(dispatch({type:  types.CATEGORY_DATA}))
+									}}>test</button>
 				</div>
 			</Suspense>
 		</Page>
