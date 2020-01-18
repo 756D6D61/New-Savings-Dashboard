@@ -11,7 +11,7 @@ import BudgetOverview from '../../components/Home/BudgetsOverview'
 import { useSelector, useDispatch } from 'react-redux'
 import * as types from '../../store/types'
 
-const Home = ({ route }) => {
+const Home = () => {
 	const categoriesData = useSelector(state => state.data)
 	const dispatch = useDispatch()
 	console.log(dispatch({ type: types.CATEGORY_DATA }))
