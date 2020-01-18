@@ -28,12 +28,9 @@ This dashboard shows mock data that is computed via a fake server. The data show
 
 ### 🔍Testing
 
--   Unit tests have been added to describe functionality of certain components like buttons (Jest)
-
--   Integration tests have been added to test things like state management (Jest + Enzyme)
-
--   End-to-end test via Cypress to check application as a whole
-
+-   Unit tests describe functionality/behaviour of components such as buttons (Jest)
+-   Integration tests test functionality such as state management (Jest + Enzyme)
+-   End-to-end test via Cypress will be added to check application as a whole
 -   To run tests `yarn test`
 
 **THIS PROJECT IS IN WORKING PROGRESS**
