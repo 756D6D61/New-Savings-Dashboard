@@ -26,4 +26,14 @@ This dashboard shows mock data that is computed via a fake server. The data show
 -   Allow the user to view details of each budget and category
 -   Styling issues
 
+### 🔍Testing
+
+-   Unit tests have been added to describe functionality of certain components like buttons (Jest)
+
+-   Integration tests have been added to test things like state management (Jest + Enzyme)
+
+-   End-to-end test via Cypress to check application as a whole
+
+-   To run tests `yarn run`
+
 **THIS PROJECT IS IN WORKING PROGRESS**
