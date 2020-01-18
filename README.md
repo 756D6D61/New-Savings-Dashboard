@@ -34,6 +34,6 @@ This dashboard shows mock data that is computed via a fake server. The data show
 
 -   End-to-end test via Cypress to check application as a whole
 
--   To run tests `yarn run`
+-   To run tests `yarn test`
 
 **THIS PROJECT IS IN WORKING PROGRESS**
