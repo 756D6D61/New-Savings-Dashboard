@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
-import Table from '../../components/Table'
+import Table from '../../components/Home/Table'
 import AddButton from '../../components/AddButton'
-import Icons from '../../components/CategoryIcons'
+import Icons from '../../components/Categories/CategoryIcons'
 import Card from '@material-ui/core/Card'
-import SubDivider from '../../components/SubDivider'
+import SubDivider from '../../components/Home/SubDivider'
 
 const Categories = () => {
 	return (

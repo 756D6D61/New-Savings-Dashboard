@@ -1,9 +1,9 @@
 import React, { Suspense, useState, useEffect } from 'react'
 import Page from '../../layout/Page'
-import AltGraph from '../../components/Graph'
-import Table from '../../components/Table'
+import AltGraph from '../../components/Home/Graph'
+import Table from '../../components/Home/Table'
 import Card from '@material-ui/core/Card'
-import SubDivider from '../../components/SubDivider'
+import SubDivider from '../../components/Home/SubDivider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faBirthdayCake,

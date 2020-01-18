@@ -1,7 +1,7 @@
 import React from 'react'
-import NavTest from '../components/NavTest'
+import NavTest from '../components/Home/NavTest'
 import PropTypes from 'prop-types'
-import Divider from '../components/Divider'
+import Divider from '../components/Home/Divider'
 
 const propTypes = {
 	children: PropTypes.node

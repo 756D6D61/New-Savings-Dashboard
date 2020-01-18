@@ -17,37 +17,7 @@ export const categoryData = () => dispatch => {
 		type: types.CATEGORY_DATA,
 		payload: Promise.all(
 			fetch(URL_CATEGORY).then(res => res.json())
+
 		)
 	})
 }
-
-/*export const categoryData = cateogry => {
-	return function(dispatch) {
-		const url = `${URL}+cateogry`
-		fetch(url, { method: 'GET' })
-			.then(res => {
-				return res.json()
-			})
-			.then(res => {
-				dispatch(category_data(res.data))
-				console.log(dispatch(category_data(res.data)))
-			})
-
-	}
-}
-
-export const budgetData = budget => {
-	return function(dispatch) {
-		const url = `${URL}+budget`
-		console.log(url)
-		fetch(url, { method: 'GET' })
-		.then(res => {
-			return res.json()
-		})
-			.then(function(res) {
-				dispatch(budget_data(res.data))
-				console.log(dispatch(budget_data(res.data)))
-			})
-
-	}
-}*/

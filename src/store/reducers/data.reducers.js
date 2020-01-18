@@ -16,6 +16,7 @@ export default (state = initialState, action) => {
 			return {
 				category: {
 					...state.category,
+					category: action.payload,
 					loading: true
 				}
 			}
@@ -23,6 +24,7 @@ export default (state = initialState, action) => {
 		return {
 			budget: {
 				...state.budget,
+				bduget: action.payload,
 				loading: true
 			}
 		}
