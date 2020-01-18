@@ -12,9 +12,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import * as types from '../../store/types'
 
 const Home = () => {
-	const categoriesData = useSelector(state => state.data)
+	const categoriesData = useSelector(state => state.category)
 	const dispatch = useDispatch()
-	console.log(dispatch({ type: types.CATEGORY_DATA }))
 	console.log(categoriesData)
 	return (
 		<Page>
