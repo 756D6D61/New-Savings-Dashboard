@@ -19,19 +19,25 @@ This dashboard shows mock data that is computed via a fake server. The data show
 ### 🔧How to Run the App
 
 -   `yarn`
+
 -   `yarn start`
 
 ### 💭Additional Features to Be Implemented
 
 -   Allow the user to view details of each budget and category
+
 -   Styling issues
 
 ### 🔍Testing
 
 -   Unit tests describe functionality/behaviour of components such as buttons (Jest)
+
 -   Integration tests test functionality such as state management (Jest + Enzyme)
+
 -   End-to-end test via Cypress to check application as a whole
+
 -   To run unit and integration tests: `yarn test`
+
 -   To run Cypress tests: `yarn run cypress open`
 
 **THIS PROJECT IS IN WORKING PROGRESS**
