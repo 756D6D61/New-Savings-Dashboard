@@ -41,10 +41,10 @@ const Home = props => {
 						<Card>
 							<MiscOverview />
 							<button onClick={() => dispatch(budgetData())}>
-								Action 1
+								Action 1{state1}
 							</button>
 							<button onClick={() => dispatch(categoryData())}>
-								Action 2
+								Action 2{state2}
 							</button>
 						</Card>
 					</div>
