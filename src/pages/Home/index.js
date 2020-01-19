@@ -9,12 +9,16 @@ import MiscOverview from '../../components/Home/MiscOverview'
 import BudgetOverview from '../../components/Home/BudgetsOverview'
 
 import { useSelector, useDispatch } from 'react-redux'
-import * as types from '../../store/types'
+import { budgetData, categoryData } from '../../store/actions/data.actions'
 
-const Home = () => {
-	const categoriesData = useSelector(state => state.category)
+const Home = props => {
 	const dispatch = useDispatch()
-	console.log(categoriesData)
+	const state1 = useSelector(state => state.budgetData)
+	const state2 = useSelector(state => state.categoryData)
+
+	/*const categoriesData = useSelector(state => state.category)
+	console.log(categoriesData)*/
+	console.log(state1)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
@@ -24,16 +28,24 @@ const Home = () => {
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<BudgetOverview />
+							{state1}
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<CategoriesOverview />
+							{state2}
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4 ">
 						<Card>
 							<MiscOverview />
+							<button onClick={() => dispatch(budgetData())}>
+								Action 1
+							</button>
+							<button onClick={() => dispatch(categoryData())}>
+								Action 2
+							</button>
 						</Card>
 					</div>
 				</div>
