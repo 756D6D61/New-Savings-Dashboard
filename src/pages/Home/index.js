@@ -23,7 +23,7 @@ const Home = props => {
 	console.log(test2)
 
 	useEffect(() => console.log(test))
-	useEffect(() => test2)
+	useEffect(() => console.log(test2))
 
 	return (
 		<Page>

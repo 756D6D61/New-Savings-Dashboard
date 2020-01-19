@@ -1,4 +1,5 @@
 import * as types from '../types'
+import { budgetData, categoryData } from '../actions/data.actions'
 
 const initialState = {
 	budget: {
@@ -17,7 +18,7 @@ export default (state = initialState, action, payload) => {
 				category: {
 					...state.category,
 					loading: true,
-					payload
+					payload: categoryData
 				}
 			}
 		case types.BUDGET_DATA:
@@ -25,7 +26,7 @@ export default (state = initialState, action, payload) => {
 				budget: {
 					...state.budget,
 					loading: true,
-					payload
+					payload: budgetData
 				}
 			}
 		default:
