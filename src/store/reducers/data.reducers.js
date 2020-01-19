@@ -10,24 +10,24 @@ const initialState = {
 		loading: false
 	}
 }
-export default (state = initialState, action) => {
+export default (state = initialState, action, payload) => {
 	switch (action.type) {
 		case types.CATEGORY_DATA:
 			return {
 				category: {
 					...state.category,
-					category: action.payload,
-					loading: true
+					loading: true,
+					payload
 				}
 			}
 		case types.BUDGET_DATA:
-		return {
-			budget: {
-				...state.budget,
-				bduget: action.payload,
-				loading: true
+			return {
+				budget: {
+					...state.budget,
+					loading: true,
+					payload
+				}
 			}
-		}
 		default:
 			return state
 	}
