@@ -16,6 +16,9 @@ const Home = props => {
 	const state1 = useSelector(state => state.budgetData)
 	const state2 = useSelector(state => state.categoryData)
 
+	console.log(state1)
+	console.log(state2)
+
 	const test = useState(budgetData)
 	const test2 = useState(categoryData)
 
@@ -24,6 +27,9 @@ const Home = props => {
 
 	useEffect(() => console.log(test))
 	useEffect(() => console.log(test2))
+
+	console.log('state' + state1)
+	console.log(state2)
 
 	return (
 		<Page>
