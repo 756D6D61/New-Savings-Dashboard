@@ -10,14 +10,11 @@ import BudgetOverview from '../../components/Home/BudgetsOverview'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData, categoryData } from '../../store/actions/data.actions'
 
-const Home = props => {
+const Home = () => {
 	const dispatch = useDispatch()
 
 	const state1 = useSelector(state => state.budgetData)
 	const state2 = useSelector(state => state.categoryData)
-
-	console.log(state1)
-	console.log(state2)
 
 	const test = useState(budgetData)
 	const test2 = useState(categoryData)
@@ -25,11 +22,8 @@ const Home = props => {
 	console.log(test)
 	console.log(test2)
 
-	useEffect(() => console.log(test))
-	useEffect(() => console.log(test2))
-
-	console.log('state' + state1)
-	console.log(state2)
+	useEffect(() => test)
+	useEffect(() => test2)
 
 	return (
 		<Page>

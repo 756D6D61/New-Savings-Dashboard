@@ -25,7 +25,11 @@ export default (state = initialState, action) => {
 		case types.BUDGET_DATA:
 			return {
 				...state,
-				budget: { ...state.budget, data: action.payload, loading: true }
+				budget: {
+					...state.budget,
+					data: action.payload,
+					loading: true
+				}
 			}
 		default:
 			return state
