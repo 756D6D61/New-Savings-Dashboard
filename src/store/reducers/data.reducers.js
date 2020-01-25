@@ -1,19 +1,31 @@
 import * as types from '../types'
-import { budgetData, categoryData } from '../actions/data.actions'
 
-const initialState = {}
+const initialState = {
+	category: {
+		data: [],
+		loading: false
+	},
+	budget: {
+		data: [],
+		loading: false
+	}
+}
 
-export default (state = initialState, action, payload) => {
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case types.CATEGORY_DATA:
 			return {
 				...state,
-				category: action.payload
+				category: {
+					...state.category,
+					data: action.payload,
+					loading: true
+				}
 			}
 		case types.BUDGET_DATA:
 			return {
 				...state,
-				budget: action.payload
+				budget: { ...state.budget, data: action.payload, loading: true }
 			}
 		default:
 			return state
