@@ -1,5 +1,14 @@
+import React, { Component } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
-import React from 'react'
+import { budgetData } from '../../store/actions/data.actions'
+import { connect } from 'react-redux'
+
+const mapStateToProps = state => ({
+	...state
+})
+const mapDispatchToProps = dispatch => ({
+	budgetData: () => dispatch(budgetData())
+})
 
 const data = [
 	{
@@ -45,21 +54,28 @@ const data = [
 		amt: 2100
 	}
 ]
-const Graph = () => {
-	return (
-		<LineChart
-			width={600}
-			height={300}
-			data={data}
-			margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-		>
-			<Line type="monotone" dataKey="uv" stroke="#8884d8" />
-			<CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-			<XAxis dataKey="name" />
-			<YAxis />
-			<Tooltip />
-		</LineChart>
-	)
+class Graph extends Component {
+	componentDidMount = () => {
+		this.props.budgetData()
+	}
+
+	render() {
+		//const data = this.props.data.budget.map(data => data)
+		return (
+			<LineChart
+				width={600}
+				height={300}
+				data={data}
+				margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+			>
+				<Line type="monotone" dataKey="uv" stroke="#8884d8" />
+				<CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+				<XAxis dataKey="name" />
+				<YAxis />
+				<Tooltip />
+			</LineChart>
+		)
+	}
 }
 
-export default Graph
+export default connect(mapStateToProps, mapDispatchToProps)(Graph)

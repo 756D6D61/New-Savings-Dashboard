@@ -20,7 +20,7 @@ const Home = () => {
 	useEffect(() => state1)
 	useEffect(() => state2)
 
-	console.log(useEffect(() => budgetData()))
+	console.log(useEffect(() => state2))
 
 	return (
 		<Page>
