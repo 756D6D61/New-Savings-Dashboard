@@ -17,11 +17,8 @@ const Home = () => {
 	const state1 = useSelector(state => state.budget)
 	const state2 = useSelector(state => state.category)
 
-	console.log(state1)
-	console.log(state2)
-
-	useEffect(() => console.log(state1))
-	useEffect(() => console.log(state2))
+	useEffect(() => state1)
+	useEffect(() => state2)
 
 	return (
 		<Page>

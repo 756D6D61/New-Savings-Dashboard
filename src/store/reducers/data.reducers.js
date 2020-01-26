@@ -31,6 +31,12 @@ export default (state = initialState, action) => {
 					loading: false
 				}
 			}
+		case types.LOADING: {
+			return {
+				...state,
+				loading: action.payload
+			}
+		}
 		default:
 			return state
 	}
