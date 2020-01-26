@@ -57,6 +57,7 @@ const data = [
 class Graph extends Component {
 	componentDidMount = () => {
 		this.props.budgetData()
+		console.log(this.props.budgetData())
 	}
 
 	render() {
