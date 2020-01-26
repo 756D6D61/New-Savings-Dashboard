@@ -13,21 +13,12 @@ export const getBudget = payload => {
 	}
 }
 
-export const loading = payload => {
-	return {
-		types: types.LOADING,
-		payload
-	}
-}
-
 export const budgetData = () => {
 	return function(dispatch) {
-		dispatch(loading(true))
 		const url = `${URL_BUDGET}`
 		axios.get(url).then(function(response) {
 			dispatch(getBudget(response.data))
 		})
-		dispatch(loading(false))
 	}
 }
 

@@ -20,6 +20,8 @@ const Home = () => {
 	useEffect(() => state1)
 	useEffect(() => state2)
 
+	console.log(useEffect(() => budgetData()))
+
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
