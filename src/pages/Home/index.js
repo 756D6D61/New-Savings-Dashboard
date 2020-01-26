@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/Home/Graph'
 import Table from '../../components/Home/Table'
@@ -12,18 +12,16 @@ import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
 	const dispatch = useDispatch()
+	dispatch(budgetData, categoryData)
 
-	const state1 = useSelector(state => state.budgetData)
-	const state2 = useSelector(state => state.categoryData)
+	const state1 = useSelector(state => state.budget)
+	const state2 = useSelector(state => state.category)
 
-	const test = useState(budgetData)
-	const test2 = useState(categoryData)
+	console.log(state1)
+	console.log(state2)
 
-	console.log(test)
-	console.log(test2)
-
-	useEffect(() => test)
-	useEffect(() => test2)
+	useEffect(() => console.log(state1))
+	useEffect(() => console.log(state2))
 
 	return (
 		<Page>
@@ -46,12 +44,6 @@ const Home = () => {
 					<div class="w-1/3 px-2  mb-4 ">
 						<Card>
 							<MiscOverview />
-							<button onClick={() => dispatch(budgetData())}>
-								Action 1{state1}
-							</button>
-							<button onClick={() => dispatch(categoryData())}>
-								Action 2{state2}
-							</button>
 						</Card>
 					</div>
 				</div>

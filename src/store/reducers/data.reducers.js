@@ -3,11 +3,11 @@ import * as types from '../types'
 const initialState = {
 	category: {
 		data: [],
-		loading: false
+		loading: true
 	},
 	budget: {
 		data: [],
-		loading: false
+		loading: true
 	}
 }
 
@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
 				category: {
 					...state.category,
 					data: action.payload,
-					loading: true
+					loading: false
 				}
 			}
 		case types.BUDGET_DATA:
@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
 				budget: {
 					...state.budget,
 					data: action.payload,
-					loading: true
+					loading: false
 				}
 			}
 		default:
