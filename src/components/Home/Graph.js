@@ -57,11 +57,11 @@ const data = [
 class Graph extends Component {
 	componentDidMount = () => {
 		this.props.budgetData()
-		console.log(this.props.budgetData())
 	}
 
 	render() {
-		//const data = this.props.data.budget.map(data => data)
+		//const data = this.props.dataReducer.budget.map(data => data)
+		//test
 		return (
 			<LineChart
 				width={600}
