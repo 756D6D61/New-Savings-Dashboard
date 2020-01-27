@@ -61,7 +61,7 @@ class Graph extends Component {
 
 	render() {
 		//const data = this.props.dataReducer.budget.map(data => data)
-		// test
+		//test
 		return (
 			<LineChart
 				width={600}
