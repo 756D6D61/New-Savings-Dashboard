@@ -11,16 +11,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
-	const dispatch = useDispatch()
-	dispatch(budgetData, categoryData)
+	useDispatch(budgetData, categoryData)
 
-	const state1 = useSelector(state => state.budget)
-	const state2 = useSelector(state => state.category)
+	const state1 = useSelector(state => state.category)
+	const state2 = useSelector(state => state.budget)
 
-	useEffect(() => state1)
-	useEffect(() => state2)
+	const test1 = useEffect(() => state1)
+	const test2 = useEffect(() => state2)
 
-	console.log(useEffect(() => state2))
+	// const test1 = useEffect(() => state1.data)
+	// const test2 = useEffect(() => state2.data)
+
+	console.log(test1)
+	console.log(test2)
 
 	return (
 		<Page>
@@ -31,13 +34,11 @@ const Home = () => {
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<BudgetOverview />
-							{state1}
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4">
 						<Card>
 							<CategoriesOverview />
-							{state2}
 						</Card>
 					</div>
 					<div class="w-1/3 px-2  mb-4 ">
