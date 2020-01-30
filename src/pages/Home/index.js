@@ -11,14 +11,17 @@ import { useSelector, useDispatch } from 'react-redux'
 import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
+	// mapDispatchToProps
 	useDispatch(budgetData, categoryData)
 
+	// mapStateToProps
 	const state1 = useSelector(state => state.category)
 	const state2 = useSelector(state => state.budget)
 
 	const test1 = useEffect(() => state1)
 	const test2 = useEffect(() => state2)
 
+	// undefined :(
 	// const test1 = useEffect(() => state1.data)
 	// const test2 = useEffect(() => state2.data)
 
