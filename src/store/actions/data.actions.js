@@ -1,4 +1,4 @@
-import * as types from '../types'
+import * as type from '../types'
 
 const URL_CATEGORY =
 	'https://cors-anywhere.herokuapp.com/https://nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=cateogry'
@@ -7,14 +7,14 @@ const URL_BUDGET =
 
 export const loading = payload => {
 	return {
-		type: types.LOADING,
+		type: type.LOADING,
 		payload
 	}
 }
 
 export const getBudget = payload => {
 	return {
-		type: types.BUDGET_DATA,
+		type: type.BUDGET_DATA,
 		payload
 	}
 }
@@ -22,8 +22,8 @@ export const getBudget = payload => {
 export const budgetData = () => {
 	return dispatch => {
 		dispatch(loading(true))
-		const url = `${URL_BUDGET}`
-		fetch(url)
+		const url2 = `${URL_BUDGET}`
+		fetch(url2)
 			.then(response => dispatch(getBudget(response.data)))
 			.catch(err => console.log(err))
 		dispatch(loading(false))
@@ -32,7 +32,7 @@ export const budgetData = () => {
 
 export const getCategory = payload => {
 	return {
-		types: types.CATEGORY_DATA,
+		types: type.CATEGORY_DATA,
 		payload
 	}
 }
@@ -40,9 +40,11 @@ export const getCategory = payload => {
 export const categoryData = () => {
 	return dispatch => {
 		dispatch(loading(true))
-		const url = `${URL_CATEGORY}`
-		fetch(url)
-			.then(response => dispatch(getCategory(response.data)))
+		const url1 = `${URL_CATEGORY}`
+		fetch(url1)
+			.then(response => {
+				dispatch(getCategory(response.data))
+			})
 			.catch(err => console.log(err))
 		dispatch(loading(false))
 	}

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/Home/Graph'
 import Table from '../../components/Home/Table'
@@ -11,15 +11,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
-	// mapDispatchToProps
-	useDispatch(budgetData(), categoryData())
-	// mapStateToProps
-	const state1 = useSelector(state => state.data)
-	//componentDidMount
-	const test = useState(state1)
-	console.log(state1)
-	console.log(test)
-	//console.log(this.props.dataReducer)
+	const dispatch = useDispatch()
+	const budgets = useSelector(state => state.data.budget)
+	const categories = useSelector(state => state.data.category)
+
+	useEffect(() => {
+		dispatch(budgetData())
+		dispatch(categoryData())
+	}, [dispatch])
+
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
