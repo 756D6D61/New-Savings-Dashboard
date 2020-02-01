@@ -14,10 +14,10 @@ const Home = () => {
 	// mapDispatchToProps
 	useDispatch(budgetData(), categoryData())
 	// mapStateToProps
-	useSelector(state => state)
+	const state = useSelector(state => state)
 	//componentDidMount
-	//const getState = useEffect(() => state)
-
+	useEffect(() => state)
+	//console.log(this.props.dataReducer)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
