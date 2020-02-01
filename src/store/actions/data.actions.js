@@ -13,12 +13,24 @@ export const getBudget = payload => {
 	}
 }
 
-export const budgetData = () => {
+/*export const oldbudgetData = () => {
 	return function(dispatch) {
 		const url = `${URL_BUDGET}`
 		axios.get(url).then(function(response) {
 			dispatch(getBudget(response.data))
 		})
+	}
+}*/
+
+export const budgetData = () => {
+	return dispatch => {
+		const url = `${URL_BUDGET}`
+		axios.get(url).then(res =>
+			dispatch({
+				type: types.BUDGET_DATA,
+				data: res.data
+			})
+		)
 	}
 }
 

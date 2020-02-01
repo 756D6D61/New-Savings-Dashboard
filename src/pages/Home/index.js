@@ -12,21 +12,25 @@ import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
 	// mapDispatchToProps
-	useDispatch(budgetData, categoryData)
+	/*useDispatch(budgetData(), categoryData())
 
 	// mapStateToProps
-	const state1 = useSelector(state => state.category)
-	const state2 = useSelector(state => state.budget)
+	const state1 = useSelector(state => state.budget)
+	const test = () => {
 
-	const test1 = useEffect(() => state1)
-	const test2 = useEffect(() => state2)
+	}
+	console.log(state1)*/
 
-	// undefined :(
-	// const test1 = useEffect(() => state1.data)
-	// const test2 = useEffect(() => state2.data)
+	const content = useSelector(state => state)
+	const dispatch = useDispatch()
 
-	console.log(test1)
-	console.log(test2)
+	const testBudget = () => {
+		dispatch(budgetData())
+	}
+
+	const testCategory = () => {
+		dispatch(categoryData())
+	}
 
 	return (
 		<Page>
