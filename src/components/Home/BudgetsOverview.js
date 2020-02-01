@@ -5,14 +5,14 @@ import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
 const BudgetOverview = () => {
 	return (
 		<>
-			<p class="text-2xl text-blue-base">Budgets</p>
+			<p className="text-2xl text-blue-base">Budgets</p>
 			<hr />
-			<div class="flex  h-10">
-				<div class="w-1/2">
-					<p class="text-xl">£20,029</p>
+			<div className="flex  h-10">
+				<div className="w-1/2">
+					<p className="text-xl">£20,029</p>
 				</div>
-				<div class="w-1/2">
-					<p class="text-base">
+				<div className="w-1/2">
+					<p className="text-base">
 						<FontAwesomeIcon
 							icon={faCaretUp}
 							size="lg"

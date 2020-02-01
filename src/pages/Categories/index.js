@@ -12,21 +12,21 @@ const Categories = () => {
 			<Suspense fallback={<p>Loading</p>}>
 				<SubDivider>Categories</SubDivider>
 				<br />
-				<div class="flex flex-wrap">
-					<div class="w-full text-center mb-4">
+				<div className="flex flex-wrap">
+					<div className="w-full text-center mb-4">
 						<AddButton>Categories</AddButton>
 					</div>
 				</div>
-				<div class="flex -mx-2">
+				<div className="flex -mx-2">
 					<div class="w-1/2 px-2 mb-4">
 						<Card>
-							<div class="text-center ">
+							<div className="text-center ">
 								<Icons />
 							</div>
 						</Card>
 					</div>
-					<div class="w-1/2 px-2  mb-4">
-						<div class="bg-gray-500 text-center h-12">
+					<div className="w-1/2 px-2  mb-4">
+						<div className="bg-gray-500 text-center h-12">
 							<Table />
 						</div>
 					</div>

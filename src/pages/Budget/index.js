@@ -11,13 +11,13 @@ const Budget = () => {
 			<Suspense fallback={<p>Loading</p>}>
 				<SubDivider>Budgets</SubDivider>
 				<br />
-				<div class="flex flex-wrap">
-					<div class="w-full  mb-4 text-center">
+				<div className="flex flex-wrap">
+					<div className="w-full  mb-4 text-center">
 						<AddButton>Budget</AddButton>
 					</div>
 				</div>
-				<div class="flex flex-wrap">
-					<div class="w-full mb-4 text-center">
+				<div className="flex flex-wrap">
+					<div className="w-full mb-4 text-center">
 						<Card>
 							<Icons />
 						</Card>

@@ -9,13 +9,13 @@ const propTypes = {
 
 const Page = ({ route, children }) => {
 	return (
-		<div class="flex content-between flex-wrap  h-5">
+		<div className="flex content-between flex-wrap  h-5">
 			<NavTest route={route} />
-			<div class="w-full pl-20 -ml-1 z-20 ">
+			<div className="w-full pl-20 -ml-1 z-20 ">
 				<Divider>Savings Dashboard</Divider>
 			</div>
 
-			<div class="w-full h-10  pl-20 pr-2">
+			<div className="w-full h-10  pl-20 pr-2">
 				<br />
 				{children}
 			</div>

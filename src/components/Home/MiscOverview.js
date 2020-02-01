@@ -3,10 +3,10 @@ import React from 'react'
 const MiscOverview = () => {
 	return (
 		<>
-			<p class="text-2xl text-blue-base">Misc.</p>
+			<p className="text-2xl text-blue-base">Misc.</p>
 			<hr />
-			<div class="flex  h-10">
-				<p class="text-center">data here</p>
+			<div className="flex  h-10">
+				<p className="text-center">data here</p>
 			</div>
 		</>
 	)
