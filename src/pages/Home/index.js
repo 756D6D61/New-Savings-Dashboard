@@ -14,7 +14,7 @@ const Home = () => {
 	// mapDispatchToProps
 	useDispatch(budgetData(), categoryData())
 	// mapStateToProps
-	const state = useSelector(state => state)
+	useSelector(state => state)
 	//componentDidMount
 	//const getState = useEffect(() => state)
 
