@@ -32,7 +32,7 @@ export const budgetData = () => {
 
 export const getCategory = payload => {
 	return {
-		types: type.CATEGORY_DATA,
+		type: type.CATEGORY_DATA,
 		payload
 	}
 }

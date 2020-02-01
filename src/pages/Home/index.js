@@ -12,6 +12,8 @@ import { budgetData, categoryData } from '../../store/actions/data.actions'
 
 const Home = () => {
 	const dispatch = useDispatch()
+
+	const state = useSelector(state => state.data)
 	const budgets = useSelector(state => state.data.budget)
 	const categories = useSelector(state => state.data.category)
 
@@ -20,6 +22,8 @@ const Home = () => {
 		dispatch(categoryData())
 	}, [dispatch])
 
+	console.log(budgets)
+	console.log(categories)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
