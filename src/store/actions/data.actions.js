@@ -6,6 +6,13 @@ const URL_CATEGORY =
 const URL_BUDGET =
 	'https://cors-anywhere.herokuapp.com/nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget'
 
+export const loading = payload => {
+	return {
+		type: types.LOADING,
+		payload
+	}
+}
+
 export const getBudget = payload => {
 	return {
 		type: types.BUDGET_DATA,
@@ -15,10 +22,14 @@ export const getBudget = payload => {
 
 export const budgetData = () => {
 	return function(dispatch) {
+		dispatch(loading(true))
 		const url = `${URL_BUDGET}`
-		fetch(url).then(function(response) {
-			dispatch(getBudget(response.data))
-		})
+		fetch(url)
+			.then(function(response) {
+				dispatch(getBudget(response.data))
+			})
+			.catch(err => console.log(err))
+		dispatch(loading(false))
 	}
 }
 
@@ -31,9 +42,13 @@ export const getCategory = payload => {
 
 export const categoryData = () => {
 	return function(dispatch) {
+		dispatch(loading(true))
 		const url = `${URL_CATEGORY}`
-		fetch(url).then(function(response) {
-			dispatch(getCategory(response.data))
-		})
+		fetch(url)
+			.then(function(response) {
+				dispatch(getCategory(response.data))
+			})
+			.catch(err => console.log(err))
+		dispatch(loading(false))
 	}
 }
