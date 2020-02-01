@@ -1,12 +1,8 @@
 import * as types from '../types'
 
 const initialState = {
-	category: {
-		data: []
-	},
-	budget: {
-		data: []
-	}
+	category: [],
+	budget: []
 }
 
 export default (state = initialState, action) => {
@@ -14,18 +10,12 @@ export default (state = initialState, action) => {
 		case types.CATEGORY_DATA:
 			return {
 				...state,
-				category: {
-					...state,
-					data: action.data
-				}
+				category: action.payload
 			}
 		case types.BUDGET_DATA:
 			return {
 				...state,
-				budget: {
-					...state,
-					data: action.data
-				}
+				budget: action.payload
 			}
 		default:
 			return state

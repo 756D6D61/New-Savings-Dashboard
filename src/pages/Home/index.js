@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useState } from 'react'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/Home/Graph'
 import Table from '../../components/Home/Table'
@@ -14,9 +14,11 @@ const Home = () => {
 	// mapDispatchToProps
 	useDispatch(budgetData(), categoryData())
 	// mapStateToProps
-	const state = useSelector(state => state)
+	const state1 = useSelector(state => state.data)
 	//componentDidMount
-	useEffect(() => state)
+	const test = useState(state1)
+	console.log(state1)
+	console.log(test)
 	//console.log(this.props.dataReducer)
 	return (
 		<Page>

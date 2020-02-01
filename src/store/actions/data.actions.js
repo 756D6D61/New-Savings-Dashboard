@@ -1,9 +1,9 @@
 import * as types from '../types'
 
 const URL_CATEGORY =
-	'https://cors-anywhere.herokuapp.com/nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=cateogry'
+	'https://cors-anywhere.herokuapp.com/https://nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=cateogry'
 const URL_BUDGET =
-	'https://cors-anywhere.herokuapp.com/nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget'
+	'https://cors-anywhere.herokuapp.com/https://nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget'
 
 export const loading = payload => {
 	return {
