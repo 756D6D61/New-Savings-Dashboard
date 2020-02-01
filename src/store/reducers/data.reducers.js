@@ -12,7 +12,7 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-	switch (action.type) {
+	switch (action.types) {
 		case types.CATEGORY_DATA:
 			return {
 				...state,
