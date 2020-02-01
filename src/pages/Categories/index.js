@@ -18,7 +18,7 @@ const Categories = () => {
 					</div>
 				</div>
 				<div className="flex -mx-2">
-					<div class="w-1/2 px-2 mb-4">
+					<div className="w-1/2 px-2 mb-4">
 						<Card>
 							<div className="text-center ">
 								<Icons />
