@@ -22,12 +22,7 @@ export const getBudget = payload => {
 export const budgetData = () => {
 	return dispatch => {
 		dispatch(loading(true))
-		fetch(URL_BUDGET, {
-			headers : {
-				'Content-Type': 'application/json',
-				'Accept': 'application/json'
-			}
-		})
+		fetch(URL_BUDGET)
 			.then(response => response.json())
 			.then(response => dispatch(getBudget(response.data)))
 			.catch(err => console.log(err))
