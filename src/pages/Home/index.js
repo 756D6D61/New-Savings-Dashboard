@@ -19,7 +19,6 @@ const Home = () => {
 
 	useEffect(() => {
 		dispatch(budgetData())
-		console.log(dispatch(budgetData()))
 		dispatch(categoryData())
 	}, [dispatch])
 
