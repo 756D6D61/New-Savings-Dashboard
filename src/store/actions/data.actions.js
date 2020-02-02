@@ -1,5 +1,5 @@
 import * as type from '../types'
-
+import axios from 'axios'
 const URL_CATEGORY =
 	'https://cors-anywhere.herokuapp.com/https://nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=cateogry'
 const URL_BUDGET =
@@ -22,9 +22,13 @@ export const getBudget = payload => {
 export const budgetData = () => {
 	return dispatch => {
 		dispatch(loading(true))
-		const url2 = `${URL_BUDGET}`
-		fetch(url2)
-			.then(response => dispatch(getBudget(response.data)))
+		fetch(URL_BUDGET, {
+			headers : {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json'
+			   }
+		})
+			.then(response => dispatch(getBudget(response.json())))
 			.catch(err => console.log(err))
 		dispatch(loading(false))
 	}
@@ -40,11 +44,8 @@ export const getCategory = payload => {
 export const categoryData = () => {
 	return dispatch => {
 		dispatch(loading(true))
-		const url1 = `${URL_CATEGORY}`
-		fetch(url1)
-			.then(response => {
-				dispatch(getCategory(response.data))
-			})
+		fetch(URL_CATEGORY)
+			.then(response => dispatch(getCategory(response.json())))
 			.catch(err => console.log(err))
 		dispatch(loading(false))
 	}

@@ -19,11 +19,14 @@ const Home = () => {
 
 	useEffect(() => {
 		dispatch(budgetData())
+		console.log(dispatch(budgetData()))
 		dispatch(categoryData())
 	}, [dispatch])
 
+	console.log(state)
 	console.log(budgets)
 	console.log(categories)
+
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>

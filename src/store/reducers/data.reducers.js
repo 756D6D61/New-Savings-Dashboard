@@ -1,4 +1,4 @@
-import * as types from '../types'
+import * as type from '../types'
 
 const initialState = {
 	category: [],
@@ -6,13 +6,13 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-	switch (action.types) {
-		case types.CATEGORY_DATA:
+	switch (action.type) {
+		case type.CATEGORY_DATA:
 			return {
 				...state,
 				category: action.payload
 			}
-		case types.BUDGET_DATA:
+		case type.BUDGET_DATA:
 			return {
 				...state,
 				budget: action.payload
