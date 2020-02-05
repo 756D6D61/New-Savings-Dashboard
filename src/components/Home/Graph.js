@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
-import { budgetData } from '../../store/actions/data.actions'
-import { connect } from 'react-redux'
-
-const mapStateToProps = state => ({
-	...state
-})
-const mapDispatchToProps = dispatch => ({
-	budgetData: () => dispatch(budgetData())
-})
 
 const data = [
 	{
@@ -55,13 +46,9 @@ const data = [
 	}
 ]
 class Graph extends Component {
-	componentDidMount = () => {
-		this.props.budgetData()
-	}
 
 	render() {
-		//const data = this.props.dataReducer.budget.map(data => data)
-		//test
+
 		return (
 			<LineChart
 				width={600}
@@ -79,4 +66,4 @@ class Graph extends Component {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Graph)
+export default Graph
