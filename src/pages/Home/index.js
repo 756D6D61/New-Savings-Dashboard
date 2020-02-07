@@ -34,12 +34,12 @@ const Home = () => {
 				<div className="flex -mx-2 text-center">
 					<div className="w-1/3 px-2  mb-4">
 						<Card>
-							<BudgetOverview />
+							<BudgetOverview budgets={budgets}/>
 						</Card>
 					</div>
 					<div className="w-1/3 px-2  mb-4">
 						<Card>
-							<CategoriesOverview />
+							<CategoriesOverview categories={categories}/>
 						</Card>
 					</div>
 					<div className="w-1/3 px-2  mb-4 ">
@@ -51,11 +51,11 @@ const Home = () => {
 				<div className="flex flex-wrap -mx-2  mb-4">
 					<div className="w-1/2 px-2">
 						<Card>
-							<AltGraph />
+							<AltGraph budgets={budgets}/>
 						</Card>
 					</div>
 					<div className="w-1/2 px-2  mb-4">
-						<Table />
+						<Table categories={categories}/>
 					</div>
 				</div>
 			</Suspense>
