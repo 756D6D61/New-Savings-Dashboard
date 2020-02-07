@@ -16,16 +16,18 @@ const Home = () => {
 	const state = useSelector(state => state.data)
 	const budgets = useSelector(state => state.data.budget)
 	const categories = useSelector(state => state.data.category)
+	//const loading - useSelector(state => state.data.loading)
 
 	useEffect(() => {
 		dispatch(budgetData())
 		dispatch(categoryData())
+		//dispatch(loading())
 	}, [dispatch])
 
 	console.log(state)
 	console.log(budgets)
 	console.log(categories)
-
+	//loading ? <BudgetOverview budgets={budgets} /> : <h1>Loading</h1>}
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
@@ -34,6 +36,7 @@ const Home = () => {
 				<div className="flex -mx-2 text-center">
 					<div className="w-1/3 px-2  mb-4">
 						<Card>
+
 							<BudgetOverview budgets={budgets}/>
 						</Card>
 					</div>
