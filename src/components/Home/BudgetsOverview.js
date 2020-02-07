@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
 const BudgetOverview = () => {
-	//console.log(this.props.budgets)
 	return (
 		<>
 			<p className="text-2xl text-blue-base">Budgets</p>
