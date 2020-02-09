@@ -23,7 +23,7 @@ const CategoriesOverview = () => {
 	const data = Object.keys(categories).map(function(key) {
 		return categories[key]})
 		.flat()
-		.map(a => Math.round(a.value))
+		.map(a => Math.round(a.value).toLocaleString())
 	console.log(data)
 
 	return (
@@ -34,22 +34,22 @@ const CategoriesOverview = () => {
 				<div className="w-1/4">
 					<FontAwesomeIcon icon={faBirthdayCake} />
 					<br />
-					£1,203
+					£{data[0]}
 				</div>
 				<div className="w-1/4">
 					<FontAwesomeIcon icon={faHeart} />
 					<br />
-					£6,201
+					£{data[1]}
 				</div>
 				<div className="w-1/4">
 					<FontAwesomeIcon icon={faSuitcaseRolling} />
 					<br />
-					£4,201
+					£{data[2]}
 				</div>
 				<div className="w-1/4">
 					<FontAwesomeIcon icon={faHome} />
 					<br />
-					£450
+					£{data[3]}
 				</div>
 			</div>
 		</>
