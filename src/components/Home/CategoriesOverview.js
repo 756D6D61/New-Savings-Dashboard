@@ -23,7 +23,7 @@ const CategoriesOverview = () => {
 	const data = Object.keys(categories).map(function(key) {
 		return categories[key]})
 		.flat()
-		.map(a => a.value)
+		.map(a => Math.round(a.value))
 	console.log(data)
 
 	return (
