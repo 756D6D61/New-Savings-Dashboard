@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import {
 	Table,
@@ -8,6 +8,8 @@ import {
 	TableRow,
 	Paper
 } from '@material-ui/core'
+import { useSelector, useDispatch } from 'react-redux'
+import { budgetData } from '../../store/actions/data.actions'
 
 const useStyles = makeStyles({
 	root: {
@@ -33,7 +35,15 @@ const rows = [
 
 export default function SimpleTable() {
 	const classes = useStyles()
+	const dispatch = useDispatch()
 
+	const budgets = useSelector(state => state.data.budget)
+
+	useEffect(() => {
+		dispatch(budgetData())
+	}, [dispatch])
+
+	console.log(budgets)
 	return (
 		<Paper className={classes.root}>
 			<Table className={classes.table} aria-label="simple table">

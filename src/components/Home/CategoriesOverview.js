@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faBirthdayCake,
@@ -6,8 +6,19 @@ import {
 	faSuitcaseRolling,
 	faHome
 } from '@fortawesome/free-solid-svg-icons'
+import { useSelector, useDispatch } from 'react-redux'
+import { categoryData } from '../../store/actions/data.actions'
 
 const CategoriesOverview = () => {
+	const dispatch = useDispatch()
+
+	const categories = useSelector(state => state.data.category)
+
+	useEffect(() => {
+		dispatch(categoryData())
+	}, [dispatch])
+
+	console.log(categories)
 	return (
 		<>
 			<p className="text-2xl text-blue-base">Categories</p>

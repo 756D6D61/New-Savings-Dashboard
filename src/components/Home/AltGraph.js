@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
 	VictoryLine,
 	VictoryChart,
 	VictoryAxis,
 	VictoryClipContainer
 } from 'victory'
+import { useSelector, useDispatch } from 'react-redux'
+import { categoryData } from '../../store/actions/data.actions'
 
 const data = [
 	{ date: '2019-12-10', volume: 16197 },
@@ -17,6 +19,15 @@ const data = [
 ]
 
 const AltGraph = () => {
+	const dispatch = useDispatch()
+
+	const categories = useSelector(state => state.data.category)
+
+	useEffect(() => {
+		dispatch(categoryData())
+	}, [dispatch])
+
+	console.log(categories)
 	return (
 		<VictoryChart padding={75}>
 			<VictoryAxis fixLabelOverlap />
