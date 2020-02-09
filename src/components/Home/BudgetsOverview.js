@@ -13,15 +13,13 @@ const BudgetOverview = () => {
 		dispatch(budgetData())
 	}, [dispatch])
 
-	//console.log(budgets)
-	const test = Object.keys(budgets).map(function(key) {return budgets[key]})
-	console.log(test)
-	const test2 = test.flat()
-	console.log(test2)
-	const test3 = test2.map(a => a.value)
-	console.log(test3)
-	const sum = test3.reduce((a,b) => a+b, 0)
+	const sum = Object.keys(budgets).map(function(key) {
+					return budgets[key]})
+					.flat()
+					.map(a => a.value)
+					.reduce((a,b) => a+b, 0)
 	console.log(sum)
+
 	return (
 		<>
 			<p className="text-2xl text-blue-base">Budgets</p>
