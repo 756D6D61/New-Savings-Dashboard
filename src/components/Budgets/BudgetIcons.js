@@ -24,8 +24,50 @@ const BudgetIcons = () => {
 	}, [dispatch])
 
 	console.log(budgets)
+
+	const icons = [
+		{ id:0, name: faHeadphonesAlt},
+		{ id:1, name: faPhone},
+		{ id:2, name: faHeartbeat},
+		{ id:3, name: faShoppingBag},
+		{ id:4, name: faShieldAlt},
+		{ id:5, name: faGamepad},
+		{ id:6, name: faWifi},
+		{ id:7, name: faHome},
+		{ id:8, name: faReceipt},
+	]
 	return (
-		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
+		<>
+			{
+						Object.keys(budgets).map(function(key) {
+							return budgets[key]})
+							.flat()
+							.map(a => {
+								return (
+									<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
+										<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
+										{icons.map(icon => (
+											<FontAwesomeIcon
+											id={icon.id}
+											icon={icon.name}/>)
+											)}
+											<br />
+											Misc.
+											<hr />
+											£{Math.round(a.value).toLocaleString()}
+										</button>
+									</div>
+								)
+							})
+					}
+		</>
+	)
+}
+
+export default BudgetIcons
+
+/*
+<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
 			<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
 				<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faHeadphonesAlt} />
@@ -115,8 +157,4 @@ const BudgetIcons = () => {
 					£156
 				</button>
 			</div>
-		</div>
-	)
-}
-
-export default BudgetIcons
+*/
