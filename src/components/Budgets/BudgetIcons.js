@@ -26,40 +26,72 @@ const BudgetIcons = () => {
 	console.log(budgets)
 
 	const icons = [
-		{ id:0, name: faHeadphonesAlt},
-		{ id:1, name: faPhone},
-		{ id:2, name: faHeartbeat},
-		{ id:3, name: faShoppingBag},
-		{ id:4, name: faShieldAlt},
-		{ id:5, name: faGamepad},
-		{ id:6, name: faWifi},
-		{ id:7, name: faHome},
-		{ id:8, name: faReceipt},
+		{ id:0, name: faHeadphonesAlt, label:'Music'},
+		{ id:1, name: faPhone, label:'Phone'},
+		{ id:2, name: faHeartbeat, label:'Health'},
+		{ id:3, name: faShoppingBag, label: 'Shopping'},
+		{ id:4, name: faShieldAlt, label: 'Security'},
+		{ id:5, name: faGamepad, label:'Gaming'},
+		{ id:6, name: faWifi, label: 'Internet'},
+		{ id:7, name: faHome, label: 'Home'},
+		{ id:8, name: faReceipt, label: 'Misc.'},
 	]
 	return (
 		<>
 			{
-						Object.keys(budgets).map(function(key) {
-							return budgets[key]})
-							.flat()
-							.map(a => {
-								return (
-									<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
-										<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
-										{icons.map(icon => (
-											<FontAwesomeIcon
+				Object.keys(budgets).map(function(key) {
+					return budgets[key]})
+					.flat()
+					.map(a => {
+						return (
+							<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
+								{icons.map(icon => (
+									<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
+										<FontAwesomeIcon
 											id={icon.id}
-											icon={icon.name}/>)
-											)}
-											<br />
-											Misc.
-											<hr />
-											£{Math.round(a.value).toLocaleString()}
-										</button>
-									</div>
-								)
-							})
-					}
+											icon={icon.name}
+										/>
+										<br />
+										{icon.label}
+										<hr />
+										£{Math.round(a.value).toLocaleString()}
+									</button>
+									))}
+							</div>
+						)
+					})
+				}
+
+		<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
+		{
+			Object.keys(budgets).map(function(key) {
+				return budgets[key]})
+				.flat()
+				.map(a => {
+					return (
+						<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
+							<hr />
+							£{Math.round(a.value).toLocaleString()}
+						</button>
+					)
+				})
+			}
+		</div>
+
+		<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
+		{
+			icons.map(icon => (
+				<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
+							<FontAwesomeIcon
+								id={icon.id}
+								icon={icon.name}
+							/>
+							<br />
+							{icon.label}
+						</button>
+			))
+			}
+		</div>
 		</>
 	)
 }
