@@ -19,6 +19,13 @@ const CategoriesOverview = () => {
 	}, [dispatch])
 
 	console.log(categories)
+
+	const data = Object.keys(categories).map(function(key) {
+		return categories[key]})
+		.flat()
+		.map(a => a.value)
+	console.log(data)
+
 	return (
 		<>
 			<p className="text-2xl text-blue-base">Categories</p>
