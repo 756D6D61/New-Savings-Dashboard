@@ -6,7 +6,6 @@ import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
 
 const Budget = () => {
-
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
