@@ -1,23 +1,12 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
 import Table from '../../components/Home/Table'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Categories/CategoryIcons'
 import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
-import { useSelector, useDispatch } from 'react-redux'
-import { categoryData } from '../../store/actions/data.actions'
 
 const Categories = () => {
-	const dispatch = useDispatch()
-
-	const categories = useSelector(state => state.data.category)
-
-	useEffect(() => {
-		dispatch(categoryData())
-	}, [dispatch])
-
-	console.log(categories)
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>

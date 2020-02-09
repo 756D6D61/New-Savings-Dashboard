@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faHeadphonesAlt,
@@ -11,8 +11,19 @@ import {
 	faHome,
 	faReceipt
 } from '@fortawesome/free-solid-svg-icons'
+import { useSelector, useDispatch } from 'react-redux'
+import { budgetData } from '../../store/actions/data.actions'
 
 const BudgetIcons = () => {
+	const dispatch = useDispatch()
+
+	const budgets = useSelector(state => state.data.budget)
+
+	useEffect(() => {
+		dispatch(budgetData())
+	}, [dispatch])
+
+	console.log(budgets)
 	return (
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
 			<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
