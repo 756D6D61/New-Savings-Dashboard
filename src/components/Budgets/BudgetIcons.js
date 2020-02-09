@@ -36,6 +36,13 @@ const BudgetIcons = () => {
 		{ id:7, name: faHome, label: 'Home'},
 		{ id:8, name: faReceipt, label: 'Misc.'},
 	]
+
+		const test4 = Object.keys(budgets).map(function(key) {
+			return budgets[key]})
+			.flat()
+			.map(a => Math.round(a.value).toLocaleString())
+
+
 	return (
 		<>
 			{
@@ -88,6 +95,7 @@ const BudgetIcons = () => {
 							/>
 							<br />
 							{icon.label}
+							<hr />
 						</button>
 			))
 			}
