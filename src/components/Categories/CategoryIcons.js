@@ -18,8 +18,6 @@ const CategoryIcons = () => {
 		dispatch(categoryData())
 	}, [dispatch])
 
-	console.log(categories)
-
 	const icons = [
 		{ id:0, name: faBirthdayCake, label:'Birthday'},
 		{ id:1, name: faHeart, label:'Wedding'},
@@ -27,8 +25,40 @@ const CategoryIcons = () => {
 		{ id:3, name: faHome, label: 'Home'}
 	]
 
+	const values = Object.keys(categories).map(function(key) {
+		return categories[key]})
+		.flat()
+		.map(a => Math.round(a.value).toLocaleString())
+
+	const names = Object.keys(categories)
+
 	return (
 		<div className="flex flex-wrap -mx-2 overflow-hidden sm:-mx-3 md:-mx-3 lg:-mx-2 xl:-mx-2">
+			{
+			values.map((a, indx) => {
+					return (
+						<div className="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
+						<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
+										<FontAwesomeIcon
+										icon={icons[indx].name}
+										/>
+							<br />
+							{names[indx]}
+							<hr />
+							£{a}
+						</button>
+						</div>
+					)
+				})
+			}
+		</div>
+
+	)
+}
+
+export default CategoryIcons
+/*
+<div className="flex flex-wrap -mx-2 overflow-hidden sm:-mx-3 md:-mx-3 lg:-mx-2 xl:-mx-2">
 			<div className="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
 				<button className="text-center bg-transparent hover:bg-blue-base text-blue-base font-semibold hover:text-white h-20 w-20 border border-blue-base hover:border-transparent rounded">
 					<FontAwesomeIcon icon={faBirthdayCake} />
@@ -92,7 +122,4 @@ const CategoryIcons = () => {
 							</div>
 						)})}
 		</div>
-	)
-}
-
-export default CategoryIcons
+ */
