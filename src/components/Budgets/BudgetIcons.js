@@ -43,7 +43,6 @@ const BudgetIcons = () => {
 	const names = Object.keys(budgets)
 
 	return (
-		<>
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
 		{
 			values.map((a, indx) => {
@@ -63,7 +62,6 @@ const BudgetIcons = () => {
 				})
 			}
 		</div>
-		</>
 	)
 }
 
