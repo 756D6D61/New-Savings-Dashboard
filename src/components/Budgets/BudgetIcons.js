@@ -37,10 +37,15 @@ const BudgetIcons = () => {
 		{ id:8, name: faReceipt, label: 'Misc.'},
 	]
 
-		const test4 = Object.keys(budgets).map(function(key) {
+			const test4 = Object.keys(budgets).map(function(key) {
 			return budgets[key]})
 			.flat()
 			.map(a => Math.round(a.value).toLocaleString())
+
+
+		const test5 = Object.keys(budgets)
+		console.log(test5)
+		console.log(test4)
 
 
 	return (
