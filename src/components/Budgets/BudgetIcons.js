@@ -41,7 +41,6 @@ const BudgetIcons = () => {
 						.map(a => Math.round(a.value).toLocaleString())
 
 	const names = Object.keys(budgets)
-
 	return (
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
 		{
@@ -53,7 +52,7 @@ const BudgetIcons = () => {
 										icon={icons[indx].name}
 										/>
 							<br />
-							{names[indx]}
+							{names[indx].charAt(0).toUpperCase()+ names[indx].slice(1)}
 							<hr />
 							£{a}
 						</button>

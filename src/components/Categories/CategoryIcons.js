@@ -43,7 +43,7 @@ const CategoryIcons = () => {
 										icon={icons[indx].name}
 										/>
 							<br />
-							{names[indx]}
+							{names[indx].charAt(0).toUpperCase()+ names[indx].slice(1)}
 							<hr />
 							£{a}
 						</button>
