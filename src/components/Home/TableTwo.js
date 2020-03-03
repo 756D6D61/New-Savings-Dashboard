@@ -19,7 +19,7 @@ const TableTwo = () => {
 
 	const columns = [
 		{name: "budget", label: "Budget"},
-		{name: "data", label: "Date"},
+		{name: "date", label: "Date"},
 		{name: "amount", label: "Amount"}
 	]
 
@@ -48,7 +48,7 @@ const TableTwo = () => {
 
 	return (
 		<MUIDataTable
-			//data={test}
+			//data={data}
 			columns={columns}
 			options={options}
 		/>
