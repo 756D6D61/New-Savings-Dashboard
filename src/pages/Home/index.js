@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
 import AltGraph from '../../components/Home/Graph'
-import Table from '../../components/Home/Table'
+import Table from '../../components/Home/TableTwo'
 import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
 import CategoriesOverview from '../../components/Home/CategoriesOverview'

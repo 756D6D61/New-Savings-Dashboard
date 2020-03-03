@@ -20,17 +20,27 @@ const TableTwo = () => {
 		{name: "amount", label: "Amount"}
 	]
 
-	const data = budgets.filter(data=>data)
+	/*const data = budgets.filter(data=>data)
 						.map(d => ({
 							budget: d.budget,
 							amount: d.amount,
 							data: d.date
-						}))
+						}))*/
+
+	const options = {
+		search: false,
+		filter: false,
+		print: false,
+		download: false,
+		viewColumns: false,
+		selectableRows: "none"
+	}
 
 	return (
 		<MUIDataTable
-			data={data}
+			//data={data}
 			columns={columns}
+			options={options}
 		/>
 	)
 }
