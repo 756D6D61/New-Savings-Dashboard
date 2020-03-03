@@ -14,6 +14,9 @@ const TableTwo = () => {
 
 	console.log(budgets)
 
+	//const newObj = budgets.reduce((a, b) => Object.assign(a, b), {})
+	//console.log(newObj)
+
 	const columns = [
 		{name: "budget", label: "Budget"},
 		{name: "data", label: "Date"},
@@ -36,9 +39,16 @@ const TableTwo = () => {
 		selectableRows: "none"
 	}
 
+	const transform = (arr) =>
+    Object.entries(arr).reduce((acc,[k,[v]]) => (acc[k] = v, acc), {})
+
+	const test = transform(budgets)
+
+	console.log(test)
+
 	return (
 		<MUIDataTable
-			//data={data}
+			//data={test}
 			columns={columns}
 			options={options}
 		/>
