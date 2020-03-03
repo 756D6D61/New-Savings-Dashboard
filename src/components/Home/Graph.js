@@ -14,6 +14,13 @@ const Graph = () => {
 
 	console.log(categories)
 
+	const transform = (arr) =>
+    Object.entries(arr).reduce((acc,[k,[v]]) => (acc[k] = v, acc), {})
+
+	const test = transform(categories)
+
+	console.log(test)
+
 	const data = [
 		{
 			name: 'Page A',
@@ -68,7 +75,7 @@ const Graph = () => {
 		>
 		<Line type="monotone" dataKey="uv" stroke="#8884d8" />
 		<CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-		<XAxis dataKey="name" />
+		<XAxis dataKey="pv" />
 		<YAxis />
 		<Tooltip />
 	</LineChart>
