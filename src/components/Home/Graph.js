@@ -12,6 +12,7 @@ const Graph = () => {
 		dispatch(categoryData())
 	}, [dispatch])
 
+	console.log(categories)
 
 	const data = [
 		{
