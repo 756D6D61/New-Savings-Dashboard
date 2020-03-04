@@ -68,33 +68,43 @@ const Graph = () => {
 	const result = Object.keys(categories).reduce(function (r, k) {
         return r.concat(categories[k]);
 	}, []);
-console.log(result);
+	console.log(result);
 
-const test2 = Object.keys(categories)
-console.log(...test2)
+	const test2 = Object.keys(categories)
+	console.log(...test2)
 
-const test100 = {...test2}
+	const test100 = {...test2}
 
-const transform2 = (arr) =>
-    Object.entries(arr).reduce((acc,[k,[v]]) => (acc[k] = v, acc), {})
+	const transform2 = (arr) =>
+    	Object.entries(arr).reduce((acc,[k,[v]]) => (acc[k] = v, acc), {})
 
 	const test3 = transform2(test2)
 
 	console.log(test3)
 	return (
 		<LineChart
-		width={500}
-		height={300}
-		data={result}
-		margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+			width={500}
+			height={300}
+			data={result}
+			margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
 		>
-		<Line type="monotone" dataKey="value" stroke="#8884d8" />
-		<CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-		<XAxis interval={0} angle={-65} dataKey={test100} />
+		<Line
+			type="monotone"
+			dataKey="value"
+			stroke="#8884d8"
+		/>
+		<CartesianGrid
+			stroke="#ccc"
+			strokeDasharray="5 5"
+		/>
+		<XAxis
+			interval={0}
+			angle={-65}
+			dataKey={test100}
+		/>
 		<YAxis />
 		<Tooltip />
 	</LineChart>
-
 	)
 }
 
