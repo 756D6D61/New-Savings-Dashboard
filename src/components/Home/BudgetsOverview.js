@@ -20,14 +20,14 @@ const BudgetOverview = () => {
 					.reduce((a,b) => a+b, 0)
 	console.log(sum)
 
-	const test = useRef();
+	const budget = useRef();
 	useEffect(() => {
-		test.current = sum;
+		budget.current = sum;
 	})
 
-	const prevTest = test.current
+	const prevBudget = budget.current
 
-	const change = ((sum-prevTest)/sum)*100
+	const change = ((sum-prevBudget)/sum)*100
 
 	return (
 		<>
@@ -40,7 +40,7 @@ const BudgetOverview = () => {
 				<div className="w-1/2">
 					<p className="text-base">
 						{
-							prevTest < sum ?
+							prevBudget < sum ?
 								<FontAwesomeIcon
 									icon={faCaretUp}
 									size="lg"
