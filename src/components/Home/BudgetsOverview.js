@@ -53,6 +53,7 @@ const BudgetOverview = () => {
 									color="red"
 								/>
 						}
+						{' '}
 						{Math.round(change)}%
 						change in budget
 					</p>
