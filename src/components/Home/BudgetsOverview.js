@@ -40,17 +40,19 @@ const BudgetOverview = () => {
 				<div className="w-1/2">
 					<p className="text-base">
 						{
-							prevTest < sum ? <FontAwesomeIcon
-							icon={faCaretUp}
-							size="lg"
-							color="green"
-						/>: <FontAwesomeIcon
-						icon={faCaretDown}
-						size="lg"
-						color="red"
-					/>
+							prevTest < sum ?
+								<FontAwesomeIcon
+									icon={faCaretUp}
+									size="lg"
+									color="green"
+								/>
+								:
+								<FontAwesomeIcon
+									icon={faCaretDown}
+									size="lg"
+									color="red"
+								/>
 						}
-						{' '}
 						{Math.round(change)}%
 						change in budget
 					</p>
