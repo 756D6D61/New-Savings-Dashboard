@@ -27,7 +27,7 @@ const BudgetOverview = () => {
 
 	const prevTest = test.current
 
-	const change = (sum/(prevTest+sum))*100
+	const change = ((sum-prevTest)/sum)*100
 
 	return (
 		<>
