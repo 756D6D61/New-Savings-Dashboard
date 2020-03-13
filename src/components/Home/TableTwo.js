@@ -12,15 +12,10 @@ const TableTwo = () => {
 		dispatch(budgetData())
 	}, [dispatch])
 
-	console.log(budgets)
-
 	const result = Object.entries(budgets)
 					.reduce((r, [k, [v]]) => (r[k] = v, r), {});
 
-	console.log(result);
-	console.log(Object.keys(budgets))
 	const data = Object.values(result)
-	console.log(data)
 
 	const columns = [
 		//{name: "budget", label: "Budget"},
