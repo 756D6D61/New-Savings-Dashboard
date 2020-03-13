@@ -18,7 +18,7 @@ const TableTwo = () => {
 					.reduce((r, [k, [v]]) => (r[k] = v, r), {});
 
 	console.log(result);
-
+	console.log(Object.keys(budgets))
 	const data = Object.values(result)
 	console.log(data)
 
