@@ -30,7 +30,8 @@ const TableTwo = () => {
 		print: false,
 		download: false,
 		viewColumns: false,
-		selectableRows: "none"
+		selectableRows: "none",
+		rowsPerPage: 4
 	}
 
 	return (
