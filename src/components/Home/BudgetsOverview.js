@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
@@ -20,6 +20,15 @@ const BudgetOverview = () => {
 					.reduce((a,b) => a+b, 0)
 	console.log(sum)
 
+	const test = useRef();
+	useEffect(() => {
+		test.current = sum;
+	})
+
+	const prevTest = test.current
+
+	const change = (sum/(prevTest+sum))*100
+
 	return (
 		<>
 			<p className="text-2xl text-blue-base">Budgets</p>
@@ -35,7 +44,8 @@ const BudgetOverview = () => {
 							size="lg"
 							color="green"
 						/>{' '}
-						2% from last 7 days
+						{Math.round(change)}%
+						change in budget
 					</p>
 				</div>
 			</div>
