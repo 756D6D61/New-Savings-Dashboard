@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import Page from '../../layout/Page'
-import Table from '../../components/Home/Table'
+import Table from '../../components/Home/TableTwo'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Categories/CategoryIcons'
 import Card from '@material-ui/core/Card'
