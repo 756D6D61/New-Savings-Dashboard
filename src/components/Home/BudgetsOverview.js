@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
 
@@ -39,11 +39,18 @@ const BudgetOverview = () => {
 				</div>
 				<div className="w-1/2">
 					<p className="text-base">
-						<FontAwesomeIcon
+						{
+							prevTest < sum ? <FontAwesomeIcon
 							icon={faCaretUp}
 							size="lg"
 							color="green"
-						/>{' '}
+						/>: <FontAwesomeIcon
+						icon={faCaretDown}
+						size="lg"
+						color="red"
+					/>
+						}
+						{' '}
 						{Math.round(change)}%
 						change in budget
 					</p>
