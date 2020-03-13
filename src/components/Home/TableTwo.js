@@ -14,28 +14,13 @@ const TableTwo = () => {
 
 	console.log(budgets)
 
-	const values = Object.keys(budgets).map(function(key) {
-		return budgets[key]})
-		.flat()
-		.map(a => Math.round(a.value).toLocaleString())
-
-	console.log(values)
-
 	const result = Object.entries(budgets)
 					.reduce((r, [k, [v]]) => (r[k] = v, r), {});
 
-console.log(result);
-const data = Object.values(result);
-console.log(data);
+	console.log(result);
 
-var test100 = Object.keys(result).map(function(key) {
-	return [result[key]];
-  });
-
-  console.log(test100);
-
-const moretest = test100.map(d => d)
-console.log(moretest)
+	const data = Object.values(result)
+	console.log(data)
 
 	const columns = [
 		//{name: "budget", label: "Budget"},
