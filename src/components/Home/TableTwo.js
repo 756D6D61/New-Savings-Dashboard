@@ -14,8 +14,19 @@ const TableTwo = () => {
 
 	console.log(budgets)
 
+	const values = Object.keys(budgets).map(function(key) {
+		return budgets[key]})
+		.flat()
+		.map(a => Math.round(a.value).toLocaleString())
+
+	console.log(values)
 	//const newObj = budgets.reduce((a, b) => Object.assign(a, b), {})
 	//console.log(newObj)
+
+	const result = Object.entries(budgets)
+                     .reduce((r, [k, [v]]) => (r[k] = v, r), {});
+
+console.log(result);
 
 	const columns = [
 		{name: "budget", label: "Budget"},
@@ -39,12 +50,7 @@ const TableTwo = () => {
 		selectableRows: "none"
 	}
 
-	const transform = (arr) =>
-    Object.entries(arr).reduce((acc,[k,[v]]) => (acc[k] = v, acc), {})
 
-	const test = transform(budgets)
-
-	console.log(test)
 
 	return (
 		<MUIDataTable
