@@ -20,26 +20,29 @@ const TableTwo = () => {
 		.map(a => Math.round(a.value).toLocaleString())
 
 	console.log(values)
-	//const newObj = budgets.reduce((a, b) => Object.assign(a, b), {})
-	//console.log(newObj)
 
 	const result = Object.entries(budgets)
-                     .reduce((r, [k, [v]]) => (r[k] = v, r), {});
+					.reduce((r, [k, [v]]) => (r[k] = v, r), {});
 
 console.log(result);
+const data = Object.values(result);
+console.log(data);
+
+var test100 = Object.keys(result).map(function(key) {
+	return [result[key]];
+  });
+
+  console.log(test100);
+
+const moretest = test100.map(d => d)
+console.log(moretest)
 
 	const columns = [
-		{name: "budget", label: "Budget"},
-		{name: "date", label: "Date"},
-		{name: "amount", label: "Amount"}
+		//{name: "budget", label: "Budget"},
+		{name: "timestamp", label: "Date"},
+		{name: "value", label: "Amount"}
 	]
 
-	/*const data = budgets.filter(data=>data)
-						.map(d => ({
-							budget: d.budget,
-							amount: d.amount,
-							data: d.date
-						}))*/
 
 	const options = {
 		search: false,
@@ -50,11 +53,9 @@ console.log(result);
 		selectableRows: "none"
 	}
 
-
-
 	return (
 		<MUIDataTable
-			//data={data}
+			data={data}
 			columns={columns}
 			options={options}
 		/>
