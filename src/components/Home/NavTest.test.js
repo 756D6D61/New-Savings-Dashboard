@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, mount, wrapper } from 'enzyme'
+import { wrapper } from 'enzyme'
 import NavTest from './NavTest'
 
 describe('Navigation', () => {
