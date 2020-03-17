@@ -1,10 +1,14 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import BudgetIcons from './BudgetIcons'
+import BudgetIcons, { budgets } from './BudgetIcons'
 
-describe("Budget Icons", () => {
+describe('Budget Icons', () => {
 	it('renders without crashing', () => {
 		mount(<BudgetIcons />)
+	})
+
+	it('failing test', () => {
+		expect(budgets).not.toEqual(undefined);
 	})
 })
 
