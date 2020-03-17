@@ -1,7 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { mount } from 'enzyme'
 import AddButton from './AddButton'
 
-it('renders without crashing', () => {
-	ReactDOM.render(<AddButton />)
+describe("Add button", () => {
+	it('renders without crashing', () => {
+		mount(<AddButton />)
+	})
 })

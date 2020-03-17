@@ -1,7 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { mount } from 'enzyme'
 import BudgetIcons from './BudgetIcons'
 
-it('renders without crashing', () => {
-	ReactDOM.render(<BudgetIcons />)
+describe("Budget Icons", () => {
+	it('renders without crashing', () => {
+		mount(<BudgetIcons />)
+	})
 })
+
+

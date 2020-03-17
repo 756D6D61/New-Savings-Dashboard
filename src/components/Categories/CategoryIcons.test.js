@@ -1,7 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { mount } from 'enzyme'
 import CategoryIcons from './CategoryIcons'
 
-it('renders without crashing', () => {
-	ReactDOM.render(<CategoryIcons />)
+describe("Category Icons", () => {
+	it('renders without crashing', () => {
+		mount(<CategoryIcons />)
+	})
 })
+
+
