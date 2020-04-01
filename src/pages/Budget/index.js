@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import Page from '../../layout/Page'
+import Page from '../../layout/page'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Budgets/BudgetIcons'
 import Card from '@material-ui/core/Card'

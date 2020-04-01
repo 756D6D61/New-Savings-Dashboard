@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import Page from '../../layout/Page'
+import Page from '../../layout/page'
 import AccForm from '../../components/AddAccount/Form'
 import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'

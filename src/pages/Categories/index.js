@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import Page from '../../layout/Page'
+import Page from '../../layout/page'
 import Table from '../../components/Home/TableTwo'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Categories/CategoryIcons'
