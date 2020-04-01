@@ -15,6 +15,7 @@ const AddAccount = () => {
 						<div className="border-r border-b border-l border-gray-400  lg:border-t  bg-white rounded-b lg:rounded-r  lg:rounded-b p-4 flex flex-col justify-between leading-normal">
 							<div className="flex items-center w-full ">
 								<AccForm />
+								test
 							</div>
 						</div>
 					</Card>
