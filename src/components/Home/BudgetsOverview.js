@@ -7,27 +7,28 @@ import { budgetData } from '../../store/actions/data.actions'
 const BudgetOverview = () => {
 	const dispatch = useDispatch()
 
-	const budgets = useSelector(state => state.data.budget)
+	const budgets = useSelector((state) => state.data.budget)
 
 	useEffect(() => {
 		dispatch(budgetData())
 	}, [dispatch])
 
-	const sum = Object.keys(budgets).map(function(key) {
-					return budgets[key]})
-					.flat()
-					.map(a => a.value)
-					.reduce((a,b) => a+b, 0)
-	console.log(sum)
+	const sum = Object.keys(budgets)
+		.map(function (key) {
+			return budgets[key]
+		})
+		.flat()
+		.map((a) => a.value)
+		.reduce((a, b) => a + b, 0)
 
-	const budget = useRef();
+	const budget = useRef()
 	useEffect(() => {
-		budget.current = sum;
+		budget.current = sum
 	})
 
 	const prevBudget = budget.current
 
-	const change = ((sum-prevBudget)/sum)*100
+	const change = ((sum - prevBudget) / sum) * 100
 
 	return (
 		<>
@@ -35,27 +36,26 @@ const BudgetOverview = () => {
 			<hr />
 			<div className="flex  h-10">
 				<div className="w-1/2">
-					<p className="text-xl">£{Math.round(sum).toLocaleString()}</p>
+					<p className="text-xl">
+						£{Math.round(sum).toLocaleString()}
+					</p>
 				</div>
 				<div className="w-1/2">
 					<p className="text-base">
-						{
-							prevBudget < sum ?
-								<FontAwesomeIcon
-									icon={faCaretUp}
-									size="lg"
-									color="green"
-								/>
-								:
-								<FontAwesomeIcon
-									icon={faCaretDown}
-									size="lg"
-									color="red"
-								/>
-						}
-						{' '}
-						{Math.round(change)}%
-						change in budget
+						{prevBudget < sum ? (
+							<FontAwesomeIcon
+								icon={faCaretUp}
+								size="lg"
+								color="green"
+							/>
+						) : (
+							<FontAwesomeIcon
+								icon={faCaretDown}
+								size="lg"
+								color="red"
+							/>
+						)}{' '}
+						{Math.round(change)}% change in budget
 					</p>
 				</div>
 			</div>

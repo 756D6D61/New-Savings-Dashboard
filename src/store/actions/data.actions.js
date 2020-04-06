@@ -23,7 +23,7 @@ export const budgetData = () => {
 	return dispatch => {
 		dispatch(loading(true))
 		fetch(URL_BUDGET)
-			.then(response => response.json())
+			.then(response => response.json(), 1)
 			.then(response => dispatch(getBudget(response.data)))
 			.catch(err => console.log(err))
 		dispatch(loading(false))
