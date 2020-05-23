@@ -5,45 +5,45 @@ const URL_CATEGORY =
 const URL_BUDGET =
 	'https://cors-anywhere.herokuapp.com/https://nrw60p8wlh.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget'
 
-export const loading = payload => {
+export const loading = (payload) => {
 	return {
 		type: type.LOADING,
-		payload
+		payload,
 	}
 }
 
-export const getBudget = payload => {
+export const getBudget = (payload) => {
 	return {
 		type: type.BUDGET_DATA,
-		payload
+		payload,
 	}
 }
 
 export const budgetData = () => {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(loading(true))
 		fetch(URL_BUDGET)
-			.then(response => response.json(), 1)
-			.then(response => dispatch(getBudget(response.data)))
-			.catch(err => console.log(err))
+			.then((response) => response.json(), 1)
+			.then((response) => dispatch(getBudget(response.data)))
+			.catch((err) => console.log(err))
 		dispatch(loading(false))
 	}
 }
 
-export const getCategory = payload => {
+export const getCategory = (payload) => {
 	return {
 		type: type.CATEGORY_DATA,
-		payload
+		payload,
 	}
 }
 
 export const categoryData = () => {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(loading(true))
 		fetch(URL_CATEGORY)
-			.then(response => response.json())
-			.then(response => dispatch(getCategory(response.data)))
-			.catch(err => console.log(err))
+			.then((response) => response.json())
+			.then((response) => dispatch(getCategory(response.data)))
+			.catch((err) => console.log(err))
 		dispatch(loading(false))
 	}
 }

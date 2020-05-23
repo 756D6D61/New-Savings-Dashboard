@@ -10,7 +10,7 @@ import {
 	ListItemIcon,
 	ListItemText,
 	Switch,
-	FormControlLabel
+	FormControlLabel,
 } from '@material-ui/core'
 
 import MenuIcon from '@material-ui/icons/Menu'
@@ -26,7 +26,7 @@ import {
 	faHome,
 	faWallet,
 	faBorderAll,
-	faFileInvoice
+	faFileInvoice,
 } from '@fortawesome/free-solid-svg-icons'
 
 import classNames from 'classnames'
@@ -40,16 +40,16 @@ const themeObject = {
 		contrastThreshold: 3,
 		tonalOffset: 0.2,
 		background: {
-			default: '#FBFCFD'
-		}
+			default: '#FBFCFD',
+		},
 	},
-	themeName: 'Light Theme'
+	themeName: 'Light Theme',
 }
 
 const useDarkMode = () => {
 	const [theme, setTheme] = useState(themeObject)
 	const {
-		palette: { type }
+		palette: { type },
 	} = theme
 
 	const toggleDarkMode = () => {
@@ -59,9 +59,9 @@ const useDarkMode = () => {
 				...theme.palette,
 				type: type === 'light' ? 'dark' : 'light',
 				background: {
-					default: type === 'light' ? '#000' : '#FBFCFD'
-				}
-			}
+					default: type === 'light' ? '#000' : '#FBFCFD',
+				},
+			},
 		}
 		setTheme(updatedTheme)
 	}
@@ -70,59 +70,59 @@ const useDarkMode = () => {
 
 const drawerWidth = 240
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
-		backgroundColor: theme.palette.background.paper
+		backgroundColor: theme.palette.background.paper,
 	},
 
 	menuButton: {
-		marginRight: 0
+		marginRight: 0,
 	},
 	hide: {
-		display: 'none'
+		display: 'none',
 	},
 	drawer: {
 		width: drawerWidth,
 		flexShrink: 0,
-		whiteSpace: 'nowrap'
+		whiteSpace: 'nowrap',
 	},
 	drawerPaper: {
-		background: '#371dca'
+		background: '#371dca',
 	},
 	drawerOpen: {
 		width: drawerWidth,
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen
+			duration: theme.transitions.duration.enteringScreen,
 		}),
 		Backdrop: {
 			zIndex: theme.zIndex.drawer + 1,
-			color: '#000'
-		}
+			color: '#000',
+		},
 	},
 	drawerClose: {
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen
+			duration: theme.transitions.duration.leavingScreen,
 		}),
 		overflowX: 'hidden',
 		width: theme.spacing(7) + 1,
 		[theme.breakpoints.up('sm')]: {
-			width: theme.spacing(9) + 1
+			width: theme.spacing(9) + 1,
 		},
 		backdrop: {
 			zIndex: theme.zIndex.drawer + 1,
-			color: '#000'
-		}
+			color: '#000',
+		},
 	},
 
 	toolbar: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		padding: theme.spacing(0, 1)
-	}
+		padding: theme.spacing(0, 1),
+	},
 }))
 
 export default function MiniDrawer() {
@@ -149,13 +149,13 @@ export default function MiniDrawer() {
 				variant="permanent"
 				className={clsx(classes.drawer, {
 					[classes.drawerOpen]: open,
-					[classes.drawerClose]: !open
+					[classes.drawerClose]: !open,
 				})}
 				classes={{
 					paper: classNames(classes.drawerPaper, {
 						[classes.drawerOpen]: open,
-						[classes.drawerClose]: !open
-					})
+						[classes.drawerClose]: !open,
+					}),
 				}}
 				open={open}
 			>
@@ -165,7 +165,7 @@ export default function MiniDrawer() {
 					onClick={handleDrawerOpen}
 					edge="start"
 					className={clsx(classes.menuButton, {
-						[classes.hide]: open
+						[classes.hide]: open,
 					})}
 				>
 					<MenuIcon />

@@ -15,19 +15,14 @@ const Home = () => {
 				<SubDivider>Home</SubDivider>
 				<br />
 				<div className="flex -mx-2 text-center">
-					<div className="w-1/3 px-2  mb-4">
+					<div className="w-1/2 px-2  mb-4">
 						<Card>
 							<BudgetOverview />
 						</Card>
 					</div>
-					<div className="w-1/3 px-2  mb-4">
+					<div className="w-1/2 px-2  mb-4">
 						<Card>
 							<CategoriesOverview />
-						</Card>
-					</div>
-					<div className="w-1/3 px-2  mb-4 ">
-						<Card>
-							<MiscOverview />
 						</Card>
 					</div>
 				</div>
@@ -40,6 +35,9 @@ const Home = () => {
 					<div className="w-1/2 px-2  mb-4">
 						<Table />
 					</div>
+				</div>
+				<div class="w-full text-right">
+					<MiscOverview />
 				</div>
 			</Suspense>
 		</Page>
