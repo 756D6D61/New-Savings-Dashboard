@@ -8,14 +8,13 @@ const AddAccount = () => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
-				<SubDivider>Add Account </SubDivider>
+				<SubDivider>Add Account</SubDivider>
 				<br />
 				<div className="w-full ">
 					<Card>
 						<div className="border-r border-b border-l border-gray-400  lg:border-t  bg-white rounded-b lg:rounded-r  lg:rounded-b p-4 flex flex-col justify-between leading-normal">
 							<div className="flex items-center w-full ">
 								<AccForm />
-								test
 							</div>
 						</div>
 					</Card>
