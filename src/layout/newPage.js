@@ -1,6 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const NewPage = () => {
+const propTypes = {
+	children: PropTypes.node,
+}
+
+const NewPage = ({ children }) => {
 	return (
 		<>
 			<div class="flex w-full">
@@ -9,8 +14,18 @@ const NewPage = () => {
 				</div>
 				<div class=" w-full bg-orange-400 text-orange-800 p-5">
 					<h2 class="text-orange-700 text-lg mb-5">Header</h2>
-					<div class="flex">
-						<div class="w-1/2 bg-orange-400 text-orange-800 p-5">
+					<div class="flex flex-col">{children}</div>
+				</div>
+			</div>
+		</>
+	)
+}
+
+NewPage.propTypes = propTypes
+
+export default NewPage
+/*
+	<div class="w-1/2 bg-orange-400 text-orange-800 p-5">
 							<h2 class="text-orange-700 text-lg mb-5">
 								Budgets
 							</h2>
@@ -33,9 +48,4 @@ const NewPage = () => {
 			</div>
 			<div class="w-full bg-orange-200 text-orange-800 p-5">
 				<h2 class="text-orange-700 text-lg mb-5">update</h2>
-			</div>
-		</>
-	)
-}
-
-export default NewPage
+			</div> */
