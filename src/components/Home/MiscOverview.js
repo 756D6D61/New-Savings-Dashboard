@@ -11,9 +11,7 @@ const MiscOverview = () => {
 	}, [])
 	return (
 		<>
-			<p class="text-right">
-				{seconds} seconds have elapsed since mounting.
-			</p>
+			<p class="text-right">Last updated on {seconds} seconds</p>
 		</>
 	)
 }
