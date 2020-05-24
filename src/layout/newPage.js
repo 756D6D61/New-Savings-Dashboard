@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Nav from '../components/Home/NavTW'
 
 const propTypes = {
 	children: PropTypes.node,
 }
 
-const NewPage = ({ children }) => {
+const NewPage = ({ children, route }) => {
 	return (
 		<>
 			<div class="flex w-full">
 				<div class="w-1/10 bg-orange-700 text-orange-100 p-5">
-					LeftNav
+					<Nav route={route} />
 				</div>
 				<div class=" w-full bg-orange-400 text-orange-800 p-5">
 					<h2 class="text-orange-700 text-lg mb-5">Header</h2>
