@@ -32,16 +32,14 @@ const BudgetOverview = () => {
 
 	return (
 		<>
-			<p className="text-2xl text-blue-base">Budgets</p>
+			<p class="text-2xl text-blue-base">Budgets</p>
 			<hr />
 			<div class="flex  h-10">
-				<div className="w-1/2">
-					<p className="text-xl">
-						£{Math.round(sum).toLocaleString()}
-					</p>
+				<div class="w-1/2">
+					<p class="text-xl">£{Math.round(sum).toLocaleString()}</p>
 				</div>
-				<div className="w-1/2">
-					<p className="text-base">
+				<div class="w-1/2">
+					<p class="text-base">
 						{prevBudget < sum ? (
 							<FontAwesomeIcon
 								icon={faCaretUp}

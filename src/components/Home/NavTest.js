@@ -1,21 +1,15 @@
 import React, { useState } from 'react'
-import clsx from 'clsx'
 import {
 	makeStyles,
 	Drawer,
 	List,
 	Divider,
-	IconButton,
 	ListItem,
 	ListItemIcon,
 	ListItemText,
 	Switch,
 	FormControlLabel,
 } from '@material-ui/core'
-
-import MenuIcon from '@material-ui/icons/Menu'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 import { Link } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
@@ -68,39 +62,16 @@ const useDarkMode = () => {
 	return [theme, toggleDarkMode]
 }
 
-const drawerWidth = 240
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
 		backgroundColor: theme.palette.background.paper,
 	},
 
-	menuButton: {
-		marginRight: 0,
-	},
-	hide: {
-		display: 'none',
-	},
-	drawer: {
-		width: drawerWidth,
-		flexShrink: 0,
-		whiteSpace: 'nowrap',
-	},
 	drawerPaper: {
 		background: '#371dca',
 	},
-	drawerOpen: {
-		width: drawerWidth,
-		transition: theme.transitions.create('width', {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
-		Backdrop: {
-			zIndex: theme.zIndex.drawer + 1,
-			color: '#000',
-		},
-	},
+
 	drawerClose: {
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
@@ -116,28 +87,12 @@ const useStyles = makeStyles((theme) => ({
 			color: '#000',
 		},
 	},
-
-	toolbar: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'flex-end',
-		padding: theme.spacing(0, 1),
-	},
 }))
 
 export default function MiniDrawer() {
 	const classes = useStyles()
-	//const theme = useTheme()
-	//{classes, theme}  = this.props
+
 	const [open, setOpen] = React.useState(false)
-
-	const handleDrawerOpen = () => {
-		setOpen(true)
-	}
-
-	const handleDrawerClose = () => {
-		setOpen(false)
-	}
 
 	const [theme, toggleDarkMode] = useDarkMode()
 	const themeConfig = createMuiTheme(theme)
@@ -147,38 +102,13 @@ export default function MiniDrawer() {
 
 			<Drawer
 				variant="permanent"
-				className={clsx(classes.drawer, {
-					[classes.drawerOpen]: open,
-					[classes.drawerClose]: !open,
-				})}
 				classes={{
 					paper: classNames(classes.drawerPaper, {
-						[classes.drawerOpen]: open,
 						[classes.drawerClose]: !open,
 					}),
 				}}
 				open={open}
 			>
-				<IconButton
-					color="inherit"
-					aria-label="open drawer"
-					onClick={handleDrawerOpen}
-					edge="start"
-					className={clsx(classes.menuButton, {
-						[classes.hide]: open,
-					})}
-				>
-					<MenuIcon />
-				</IconButton>
-				<div className={classes.toolbar}>
-					<IconButton onClick={handleDrawerClose}>
-						{theme.direction === 'rtl' ? (
-							<ChevronRightIcon />
-						) : (
-							<ChevronLeftIcon />
-						)}
-					</IconButton>
-				</div>
 				<List>
 					<Link to="/">
 						<ListItem key="Home">
@@ -192,7 +122,6 @@ export default function MiniDrawer() {
 							<ListItemText primary="Home" />
 						</ListItem>
 					</Link>
-
 					<Link to="/Budget">
 						<ListItem key="Budget">
 							<ListItemIcon>

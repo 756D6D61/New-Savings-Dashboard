@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Divider from '../components/Home/Divider'
 
 const propTypes = {
-	children: PropTypes.node
+	children: PropTypes.node,
 }
 
 const Page = ({ route, children }) => {
