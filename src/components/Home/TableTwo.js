@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import MUIDataTable from 'mui-datatables'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
-
+import fromUnixTime from 'date-fns/fromUnixTime'
 const TableTwo = () => {
 	const dispatch = useDispatch()
 
@@ -16,8 +16,20 @@ const TableTwo = () => {
 		(r, [k, [v]]) => ((r[k] = v), r),
 		{}
 	)
-
 	const data = Object.values(result)
+
+	const theData = data.map((a) => [
+		{
+			timestamp: String(fromUnixTime(a.timestamp)),
+			value: a.value.toFixed(2),
+		},
+	])
+
+	const result2 = Object.entries(theData).reduce(
+		(r, [k, [v]]) => ((r[k] = v), r),
+		{}
+	)
+	const data2 = Object.values(result2)
 
 	const columns = [
 		{ name: 'timestamp', label: 'Date' },
@@ -34,7 +46,7 @@ const TableTwo = () => {
 		rowsPerPage: 4,
 	}
 
-	return <MUIDataTable data={data} columns={columns} options={options} />
+	return <MUIDataTable data={data2} columns={columns} options={options} />
 }
 
 export default TableTwo
