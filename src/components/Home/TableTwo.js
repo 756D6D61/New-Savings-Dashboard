@@ -3,8 +3,8 @@ import MUIDataTable from 'mui-datatables'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
 import { format } from 'date-fns'
-
 import fromUnixTime from 'date-fns/fromUnixTime'
+
 const TableTwo = () => {
 	const dispatch = useDispatch()
 
