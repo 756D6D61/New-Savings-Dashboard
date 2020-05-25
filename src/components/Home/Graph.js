@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 import { useSelector, useDispatch } from 'react-redux'
 import { categoryData } from '../../store/actions/data.actions'
-import { format } from 'date-fns'
-import fromUnixTime from 'date-fns/fromUnixTime'
+import moment from 'moment'
 
 const Graph = () => {
 	const dispatch = useDispatch()
@@ -49,7 +48,7 @@ const Graph = () => {
 			<XAxis
 				interval={0}
 				dataKey="timestamp"
-				tickFormatter={(tick) => fromUnixTime(tick, 'dd/MM/yy')}
+				tickFormatter={(tick) => moment(tick).format('Do MMM YY')}
 			/>
 			<YAxis />
 			<Tooltip />
