@@ -8,8 +8,10 @@ import {
 	faFileInvoice,
 	faCog,
 } from '@fortawesome/free-solid-svg-icons'
+import useDarkMode from 'use-dark-mode'
 
 const NavTW = () => {
+	const { value, toggle } = useDarkMode(false)
 	return (
 		<>
 			<ol>
@@ -33,8 +35,12 @@ const NavTW = () => {
 						<FontAwesomeIcon icon={faFileInvoice} size="lg" />
 					</Link>
 				</li>
-				<li>
-					<FontAwesomeIcon icon={faCog} size="lg" />
+				<li onClick={toggle}>
+					{value ? (
+						<FontAwesomeIcon icon={faCog} size="lg" />
+					) : (
+						<FontAwesomeIcon icon={faCog} size="lg" color="red" />
+					)}
 				</li>
 			</ol>
 		</>
