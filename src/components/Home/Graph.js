@@ -13,29 +13,10 @@ const Graph = () => {
 		dispatch(categoryData())
 	}, [dispatch])
 
-	console.log(categories)
-
-	const transform = (arr) =>
-		Object.entries(arr).reduce((acc, [k, [v]]) => ((acc[k] = v), acc), {})
-
-	const test = transform(categories)
-
-	console.log(test)
-
 	const result = Object.keys(categories).reduce(function (r, k) {
 		return r.concat(categories[k])
 	}, [])
-	console.log(result)
 
-	const test2 = Object.keys(categories)
-	console.log(...test2)
-
-	const transform2 = (arr) =>
-		Object.entries(arr).reduce((acc, [k, [v]]) => ((acc[k] = v), acc), {})
-
-	const test3 = transform2(test2)
-
-	console.log(test3)
 	return (
 		<LineChart
 			width={500}
