@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import MUIDataTable from 'mui-datatables'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
+import { format } from 'date-fns'
+
 import fromUnixTime from 'date-fns/fromUnixTime'
 const TableTwo = () => {
 	const dispatch = useDispatch()
@@ -20,7 +22,7 @@ const TableTwo = () => {
 
 	const theData = data.map((a) => [
 		{
-			timestamp: String(fromUnixTime(a.timestamp)),
+			timestamp: String(format(fromUnixTime(a.timestamp), 'do MMM yy')),
 			value: '£' + a.value.toFixed(2),
 		},
 	])
