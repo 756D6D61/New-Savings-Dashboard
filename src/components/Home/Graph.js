@@ -48,7 +48,7 @@ const Graph = () => {
 			<XAxis
 				interval={0}
 				dataKey="timestamp"
-				tickFormatter={(tick) => moment(tick).format('Do MMM YY')}
+				tickFormatter={(tick) => moment(tick).format('Do MMM YYYY')}
 			/>
 			<YAxis />
 			<Tooltip />
