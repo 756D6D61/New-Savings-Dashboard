@@ -21,7 +21,7 @@ const TableTwo = () => {
 	const theData = data.map((a) => [
 		{
 			timestamp: String(fromUnixTime(a.timestamp)),
-			value: a.value.toFixed(2),
+			value: '£' + a.value.toFixed(2),
 		},
 	])
 
