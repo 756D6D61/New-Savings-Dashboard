@@ -14,7 +14,6 @@ const NewPage = ({ children, route }) => {
 					<Nav route={route} />
 				</div>
 				<div class=" w-full p-5">
-					<h2 class="text-lg mb-5">Header</h2>
 					<div class="flex flex-col">{children}</div>
 				</div>
 			</div>

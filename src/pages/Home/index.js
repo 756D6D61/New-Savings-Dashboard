@@ -14,26 +14,29 @@ const Home = () => {
 			<Suspense fallback={<p>Loading</p>}>
 				<SubDivider>Home</SubDivider>
 				<br />
-				<div class="flex -mx-2 text-center">
-					<div class="w-1/2 px-2  mb-4">
+				<div class="flex gap-3 grid grid-cols-2">
+					<div class=" bg-green-400 rounded p-2">
 						<Card>
 							<BudgetOverview />
 						</Card>
 					</div>
-					<div class="w-1/2 px-2  mb-4">
+					<div class="bg-green-400 rounded p-2">
 						<Card>
 							<CategoriesOverview />
 						</Card>
 					</div>
 				</div>
-				<div class="flex flex-wrap -mx-2  mb-4">
-					<div class="w-1/2 px-2">
-						<Card>
+				<br />
+				<div class="flex gap-2 grid grid-cols-2">
+					<div class=" bg-green-400 rounded p-2">
+						<h2 class="text-lg ">
 							<AltGraph />
-						</Card>
+						</h2>
 					</div>
-					<div class="w-1/2 px-2  mb-4">
-						<Table />
+					<div class="bg-green-400 rounded p-2">
+						<h2 class="text-lg ">
+							<Table />
+						</h2>
 					</div>
 				</div>
 				<div class="w-full text-right">
