@@ -14,7 +14,7 @@ const NavTW = () => {
 	const { value, toggle } = useDarkMode(false)
 	return (
 		<>
-			<ol class="text-center">
+			<ol class="text-center text-red-300">
 				<li class="pb-5">
 					<Link to="/">
 						<FontAwesomeIcon icon={faHome} size="lg" />

@@ -30,7 +30,7 @@ const CategoriesOverview = () => {
 
 	return (
 		<>
-			<p class="text-2xl text-center text-blue-base">Categories</p>
+			<p class="text-2xl text-center text-red-600">Categories</p>
 			<hr />
 			<div class="flex text-center">
 				<div class="w-1/4">
