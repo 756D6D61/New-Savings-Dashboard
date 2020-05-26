@@ -7,36 +7,33 @@ import SubDivider from '../../components/Home/SubDivider'
 import CategoriesOverview from '../../components/Home/CategoriesOverview'
 import MiscOverview from '../../components/Home/MiscOverview'
 import BudgetOverview from '../../components/Home/BudgetsOverview'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
-				<SubDivider>Home</SubDivider>
+				<SubDivider>
+					<FontAwesomeIcon icon={faHome} size="sm" /> Home
+				</SubDivider>
 				<br />
 				<div class="flex gap-3 grid grid-cols-2">
 					<div class=" bg-green-400 rounded p-2">
-						<Card>
-							<BudgetOverview />
-						</Card>
+						<BudgetOverview />
 					</div>
 					<div class="bg-green-400 rounded p-2">
-						<Card>
-							<CategoriesOverview />
-						</Card>
+						<CategoriesOverview />
 					</div>
 				</div>
 				<br />
 				<div class="flex gap-2 grid grid-cols-2">
 					<div class=" bg-green-400 rounded p-2">
-						<h2 class="text-lg ">
+						<Card>
 							<AltGraph />
-						</h2>
+						</Card>
 					</div>
 					<div class="bg-green-400 rounded p-2">
-						<h2 class="text-lg ">
-							<Table />
-						</h2>
+						<Table />
 					</div>
 				</div>
 				<div class="w-full text-right">
