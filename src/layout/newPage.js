@@ -9,12 +9,12 @@ const propTypes = {
 const NewPage = ({ children, route }) => {
 	return (
 		<>
-			<div class="flex w-full">
-				<div class="w-1/10 bg-orange-700 text-orange-100 p-5">
+			<div class="flex h-screen w-full">
+				<div class="bg-green-500 w-1/10 p-5">
 					<Nav route={route} />
 				</div>
-				<div class=" w-full bg-orange-400 text-orange-800 p-5">
-					<h2 class="text-orange-700 text-lg mb-5">Header</h2>
+				<div class=" w-full p-5">
+					<h2 class="text-lg mb-5">Header</h2>
 					<div class="flex flex-col">{children}</div>
 				</div>
 			</div>

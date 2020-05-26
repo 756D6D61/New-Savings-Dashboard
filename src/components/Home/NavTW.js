@@ -14,23 +14,27 @@ const NavTW = () => {
 	const { value, toggle } = useDarkMode(false)
 	return (
 		<>
-			<ol>
-				<li>
+			<ol class="text-center">
+				<li class="pb-5">
 					<Link to="/">
 						<FontAwesomeIcon icon={faHome} size="lg" />
 					</Link>
 				</li>
-				<li>
+				<li class="pb-5">
 					<Link to="/Budget">
-						<FontAwesomeIcon icon={faWallet} size="lg" />
+						<FontAwesomeIcon
+							icon={faWallet}
+							size="lg"
+							title="tooltip"
+						/>
 					</Link>
 				</li>
-				<li>
+				<li class="pb-6">
 					<Link to="/Categories">
 						<FontAwesomeIcon icon={faBorderAll} size="lg" />
 					</Link>
 				</li>
-				<li>
+				<li class="pb-6">
 					<Link to="/AddAccount">
 						<FontAwesomeIcon icon={faFileInvoice} size="lg" />
 					</Link>
@@ -39,7 +43,7 @@ const NavTW = () => {
 					{value ? (
 						<FontAwesomeIcon icon={faCog} size="lg" />
 					) : (
-						<FontAwesomeIcon icon={faCog} size="lg" color="red" />
+						<FontAwesomeIcon icon={faCog} size="lg" />
 					)}
 				</li>
 			</ol>
