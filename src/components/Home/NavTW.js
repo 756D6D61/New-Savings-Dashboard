@@ -39,7 +39,7 @@ const NavTW = () => {
 						<FontAwesomeIcon icon={faFileInvoice} size="lg" />
 					</Link>
 				</li>
-				<li onClick={toggle}>
+				<li onClick={toggle} class="cursor-pointer">
 					{value ? (
 						<FontAwesomeIcon icon={faCog} size="lg" />
 					) : (
