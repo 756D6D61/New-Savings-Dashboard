@@ -18,21 +18,21 @@ const Home = () => {
 				</SubDivider>
 				<br />
 				<div class="flex gap-3 grid grid-cols-2">
-					<div class=" bg-green-400 rounded p-2">
+					<div class="shadow-md bg-green-400 rounded p-2">
 						<BudgetOverview />
 					</div>
-					<div class="bg-green-400 rounded p-2">
+					<div class="shadow-md bg-green-400 rounded p-2">
 						<CategoriesOverview />
 					</div>
 				</div>
 				<br />
 				<div class="flex gap-2 grid grid-cols-2">
-					<div class=" bg-green-400 rounded p-2">
+					<div class="shadow-md bg-green-400 rounded p-2">
 						<Card>
 							<AltGraph />
 						</Card>
 					</div>
-					<div class="bg-green-400 rounded p-2">
+					<div class="shadow-md bg-green-400 rounded p-2">
 						<Table />
 					</div>
 				</div>
