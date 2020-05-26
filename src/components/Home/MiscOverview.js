@@ -11,7 +11,9 @@ const MiscOverview = () => {
 	}, [])
 	return (
 		<>
-			<p class="text-right">Last updated on {seconds} seconds</p>
+			<p class="text-right  text-red-500">
+				Last updated on {seconds} seconds
+			</p>
 		</>
 	)
 }
