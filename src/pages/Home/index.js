@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import Page from '../../layout/page'
+import Page from '../../layout/newPage'
 import AltGraph from '../../components/Home/Graph'
 import Table from '../../components/Home/TableTwo'
 import Card from '@material-ui/core/Card'
