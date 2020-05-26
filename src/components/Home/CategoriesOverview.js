@@ -30,9 +30,9 @@ const CategoriesOverview = () => {
 
 	return (
 		<>
-			<p class="text-2xl text-blue-base">Categories</p>
+			<p class="text-2xl text-center text-blue-base">Categories</p>
 			<hr />
-			<div class="flex">
+			<div class="flex text-center">
 				<div class="w-1/4">
 					<FontAwesomeIcon icon={faBirthdayCake} />
 					<br />£{data[0]}

@@ -32,7 +32,7 @@ const BudgetOverview = () => {
 
 	return (
 		<>
-			<p class="text-2xl text-blue-base">Budgets</p>
+			<p class="text-2xl text-center text-blue-base">Budgets</p>
 			<hr />
 			<div class="flex  h-10">
 				<div class="w-1/2">
