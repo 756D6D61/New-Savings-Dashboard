@@ -30,8 +30,9 @@ const Graph = () => {
 				interval={0}
 				dataKey="timestamp"
 				tickFormatter={(tick) => moment(tick).format('Do MMM YYYY')}
+				stroke="#fed8d7"
 			/>
-			<YAxis />
+			<YAxis stroke="#fed8d7" />
 			<Tooltip />
 		</LineChart>
 	)
