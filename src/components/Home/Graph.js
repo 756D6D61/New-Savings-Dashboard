@@ -33,7 +33,6 @@ const Graph = () => {
 				stroke="#fc8181"
 			/>
 			<YAxis stroke="#fc8181" />
-			<Tooltip />
 		</LineChart>
 	)
 }
