@@ -39,7 +39,7 @@ const CategoryIcons = () => {
 			{values.map((a, indx) => {
 				return (
 					<div className="my-2 px-2 w-1/2 overflow-hidden sm:my-3 sm:px-3 sm:w-1/2 md:my-3 md:px-3 md:w-1/2 lg:my-2 lg:px-2 xl:my-2 xl:px-2">
-						<button className="text-center bg-transparent hover:bg-red-400 text-red-400 font-semibold hover:text-white h-20 w-20 border border-red-400 hover:border-transparent rounded">
+						<button className="text-center bg-transparent hover:bg-red-400 text-red-400 font-semibold hover:text-white h-20 w-20 border border-red-400 hover:border-transparent rounded outline-none focus:outline-none">
 							<FontAwesomeIcon icon={icons[indx].name} />
 							<br />
 							{names[indx].charAt(0).toUpperCase() +
