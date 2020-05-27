@@ -29,7 +29,7 @@ const CategoriesOverview = () => {
 		<>
 			<p class="text-2xl text-center text-red-600">Categories</p>
 			<hr class="border-red-300" />
-			<div class="flex text-center">
+			<div class="flex text-center text-red-200">
 				<div class="w-1/4">
 					<FontAwesomeIcon icon={faBirthdayCake} />
 					<br />£{data[0]}

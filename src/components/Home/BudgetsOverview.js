@@ -36,10 +36,12 @@ const BudgetOverview = () => {
 			<hr class="border-red-300" />
 			<div class="flex h-10">
 				<div class="w-1/2">
-					<p class="text-xl">£{Math.round(sum).toLocaleString()}</p>
+					<p class="text-xl text-red-200">
+						£{Math.round(sum).toLocaleString()}
+					</p>
 				</div>
 				<div class="w-1/2">
-					<p class="text-base">
+					<p class="text-base text-red-200">
 						{prevBudget < sum ? (
 							<FontAwesomeIcon
 								icon={faCaretUp}
