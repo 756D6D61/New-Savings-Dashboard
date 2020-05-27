@@ -24,8 +24,8 @@ const Graph = () => {
 			data={result}
 			margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
 		>
-			<Line type="monotone" dataKey="value" stroke="#8884d8" />
-			<CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+			<Line type="monotone" dataKey="value" stroke="#fc8181" />
+			<CartesianGrid stroke="#fed8d7" strokeDasharray="5 5" />
 			<XAxis
 				interval={0}
 				dataKey="timestamp"
