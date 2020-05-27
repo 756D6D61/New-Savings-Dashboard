@@ -3,19 +3,21 @@ import Page from '../../layout/newPage'
 import AccForm from '../../components/AddAccount/Form'
 import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFileInvoice } from '@fortawesome/free-solid-svg-icons'
+
 const AddAccount = () => {
 	return (
 		<Page>
 			<Suspense fallback={<p>Loading</p>}>
-				<SubDivider>Add Account</SubDivider>
+				<SubDivider>
+					<FontAwesomeIcon icon={faFileInvoice} size="sm" /> Add
+					Account
+				</SubDivider>
 				<br />
-				<div class="w-full ">
+				<div class="w-full shadow-md bg-red-400 p-3 rounded ">
 					<Card>
-						<div class="border-r border-b border-l border-gray-400  lg:border-t  bg-white rounded-b lg:rounded-r  lg:rounded-b p-4 flex flex-col justify-between leading-normal">
-							<div class="flex items-center w-full ">
-								<AccForm />
-							</div>
-						</div>
+						<AccForm />
 					</Card>
 				</div>
 			</Suspense>
