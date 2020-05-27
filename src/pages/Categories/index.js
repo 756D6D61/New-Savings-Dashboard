@@ -16,12 +16,12 @@ const Categories = () => {
 					<FontAwesomeIcon icon={faBorderAll} size="sm" /> Categories
 				</SubDivider>
 				<br />
-				<div class="flex flex-wrap">
+				<div class="flex flex-row">
 					<div class="w-full text-center mb-4">
 						<AddButton>Categories</AddButton>
 					</div>
 				</div>
-				<div class="flex -mx-2">
+				<div class="flex flex-row -mx-2">
 					<div class="w-1/2 h-full px-2 mb-4 text-center shadow-md bg-red-400 rounded p-3">
 						<Card>
 							<Icons />

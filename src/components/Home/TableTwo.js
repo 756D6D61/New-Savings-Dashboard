@@ -44,6 +44,7 @@ const TableTwo = () => {
 		download: false,
 		viewColumns: false,
 		selectableRows: 'none',
+		rowsPerPageOptions: false,
 		rowsPerPage: 4,
 	}
 
