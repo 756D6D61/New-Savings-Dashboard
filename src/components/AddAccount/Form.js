@@ -61,23 +61,21 @@ const AccForm = () => {
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-indigo-600"
+								className="form-checkbox text-red-400 outline-none"
 							/>
 							<span className="ml-2">Music</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-green-500"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Phone</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-pink-600"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Health</span>
 						</label>
@@ -85,24 +83,21 @@ const AccForm = () => {
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-indigo-600"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Shopping</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-green-500"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Security</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-pink-600"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Gaming</span>
 						</label>
@@ -110,24 +105,21 @@ const AccForm = () => {
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-indigo-600"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Internet</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-green-500"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Home</span>
 						</label>
 						<label className="inline-flex items-center">
 							<input
 								type="checkbox"
-								className="form-checkbox text-pink-600"
-								checked
+								className="form-checkbox text-red-400"
 							/>
 							<span className="ml-2">Misc.</span>
 						</label>
@@ -143,7 +135,7 @@ const AccForm = () => {
 					</label>
 				</div>
 				<div>
-					<button className="block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+					<button className="block mt-4 bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
 						Save
 					</button>
 				</div>
