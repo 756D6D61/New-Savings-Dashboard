@@ -2,7 +2,6 @@ import React, { Suspense } from 'react'
 import Page from '../../layout/newPage'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Budgets/BudgetIcons'
-import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWallet } from '@fortawesome/free-solid-svg-icons'
@@ -30,9 +29,15 @@ const Budget = () => {
 								: 'w-full shadow-md bg-gray-800 rounded p-3 text-center'
 						}
 					>
-						<Card>
+						<div
+							class={
+								value
+									? 'bg-white rounded h-full shadow'
+									: 'bg-none rounded'
+							}
+						>
 							<Icons />
-						</Card>
+						</div>
 					</div>
 				</div>
 			</Suspense>

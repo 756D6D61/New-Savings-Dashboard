@@ -49,9 +49,15 @@ const Home = () => {
 								: 'shadow-md bg-gray-800 rounded p-2'
 						}
 					>
-						<Card>
+						<div
+							class={
+								value
+									? 'bg-white rounded h-full shadow'
+									: 'bg-none rounded'
+							}
+						>
 							<AltGraph />
-						</Card>
+						</div>
 					</div>
 					<div
 						class={

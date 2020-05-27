@@ -3,7 +3,6 @@ import Page from '../../layout/newPage'
 import Table from '../../components/Home/TableTwo'
 import AddButton from '../../components/AddButton'
 import Icons from '../../components/Categories/CategoryIcons'
-import Card from '@material-ui/core/Card'
 import SubDivider from '../../components/Home/SubDivider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBorderAll } from '@fortawesome/free-solid-svg-icons'
@@ -28,11 +27,17 @@ const Categories = () => {
 								: 'w-1/2 h-full px-2 mb-4 text-center shadow-md bg-gray-800 rounded p-3'
 						}
 					>
-						<Card>
+						<div
+							class={
+								value
+									? 'bg-white rounded h-full shadow'
+									: 'bg-none rounded'
+							}
+						>
 							<Icons />
-						</Card>
+						</div>
 					</div>
-					<div class="w-1/2   mb-4">
+					<div class="w-1/2 mb-4">
 						<div
 							class={
 								value
