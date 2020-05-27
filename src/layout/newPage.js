@@ -1,19 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Nav from '../components/Home/NavTW'
+import useDarkMode from 'use-dark-mode'
 
 const propTypes = {
 	children: PropTypes.node,
 }
 
 const NewPage = ({ children, route }) => {
+	const { value } = useDarkMode(true)
 	return (
 		<>
 			<div class="flex h-screen w-full">
 				<div class="bg-red-500 p-5">
 					<Nav route={route} />
 				</div>
-				<div class="bg-red-100 w-full p-5">
+				<div
+					class={
+						value
+							? 'bg-red-100 w-full p-5'
+							: 'bg-gray-900 w-full p-5'
+					}
+				>
 					<div class="flex flex-col">{children}</div>
 				</div>
 			</div>

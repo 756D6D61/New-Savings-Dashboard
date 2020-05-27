@@ -8,11 +8,7 @@ module.exports = {
 			md: '768px',
 			lg: '1024px',
 			xl: '1280px',
-		},
-		extend: {
-			screens: {
-				dark: { raw: '(prefers-color-scheme: dark)' },
-			},
+			dark: { raw: '(prefers-color-scheme: dark)' },
 		},
 		colors: {
 			transparent: 'transparent',
@@ -497,5 +493,5 @@ module.exports = {
 		zIndex: ['responsive'],
 	},
 	corePlugins: {},
-	plugins: [require('@tailwindcss/custom-forms')],
+	plugins: [require('@tailwindcss/custom-forms', 'tailwindcss-dark-mode')],
 }

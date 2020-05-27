@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
+import useDarkMode from 'use-dark-mode'
 
 const BudgetOverview = () => {
 	const dispatch = useDispatch()
@@ -30,10 +31,11 @@ const BudgetOverview = () => {
 
 	const change = ((sum - prevBudget) / sum) * 100
 
+	const { value } = useDarkMode(false)
 	return (
 		<>
 			<p class="text-2xl text-center text-red-600">Budgets</p>
-			<hr class="border-red-300" />
+			<hr class={value ? 'border-red-300' : 'border-gray-600'} />
 			<div class="flex h-10">
 				<div class="w-1/2">
 					<p class="text-xl text-red-600">

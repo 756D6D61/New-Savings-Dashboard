@@ -1,11 +1,21 @@
 import React from 'react'
+import useDarkMode from 'use-dark-mode'
 
 const AccForm = () => {
+	const { value } = useDarkMode(false)
 	return (
-		<div class=" border-gray-400    bg-white rounded-b  p-4 flex flex-col justify-between ">
+		<div
+			class={
+				value
+					? 'border-gray-400 bg-white rounded-b  p-4 flex flex-col justify-between'
+					: 'border-gray-400 bg-gray-700 rounded-b  p-4 flex flex-col justify-between '
+			}
+		>
 			<div class="w-full">
 				<label class="block">
-					<span class="text-gray-700">Account Name Name</span>
+					<span class={value ? 'text-gray-700' : 'text-white'}>
+						Account Name Name
+					</span>
 					<input
 						class="form-input mt-1 block w-full"
 						placeholder="Name of Account"
@@ -13,7 +23,9 @@ const AccForm = () => {
 				</label>
 
 				<div class="block mt-4">
-					<span class="text-gray-700">Account Type</span>
+					<span class={value ? 'text-gray-700' : 'text-white'}>
+						Account Type
+					</span>
 					<div class="block mt-2">
 						<label class="inline-flex items-center">
 							<input
@@ -46,7 +58,9 @@ const AccForm = () => {
 				</div>
 
 				<label class="block mt-4">
-					<span class="text-gray-700">Category</span>
+					<span class={value ? 'text-gray-700' : 'text-white'}>
+						Category
+					</span>
 					<select class="form-select mt-1 block w-full">
 						<option>Birthday</option>
 						<option>Wedding</option>
@@ -56,7 +70,9 @@ const AccForm = () => {
 				</label>
 
 				<div class="block mt-4">
-					<span class="text-gray-700">Budgets</span>
+					<span class={value ? 'text-gray-700' : 'text-white'}>
+						Budgets
+					</span>
 					<div class="mt-2">
 						<label class="inline-flex items-center">
 							<input
@@ -127,7 +143,9 @@ const AccForm = () => {
 				</div>
 				<div>
 					<label class="block mt-4">
-						<span class="text-gray-700">Savings Per Month</span>
+						<span class={value ? 'text-gray-700' : 'text-white'}>
+							Savings Per Month
+						</span>
 						<input
 							class="form-input mt-1 block w-full"
 							placeholder="Enter amount here"
@@ -135,7 +153,13 @@ const AccForm = () => {
 					</label>
 				</div>
 				<div>
-					<button class="block mt-4 bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+					<button
+						class={
+							value
+								? 'block mt-4 bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded'
+								: 'block mt-4 bg-gray-800 hover:bg-gray-900 text-gray-600 font-bold py-2 px-4 rounded'
+						}
+					>
 						Save
 					</button>
 				</div>

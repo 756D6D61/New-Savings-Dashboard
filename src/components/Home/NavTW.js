@@ -43,7 +43,11 @@ const NavTW = () => {
 					{value ? (
 						<FontAwesomeIcon icon={faCog} size="lg" />
 					) : (
-						<FontAwesomeIcon icon={faCog} size="lg" />
+						<FontAwesomeIcon
+							icon={faCog}
+							size="lg"
+							class="text-red-700"
+						/>
 					)}
 				</li>
 			</ol>
