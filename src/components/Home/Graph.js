@@ -19,10 +19,10 @@ const Graph = () => {
 
 	return (
 		<LineChart
-			width={500}
-			height={300}
+			width={600}
+			height={325}
 			data={result}
-			margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+			margin={{ top: 5, right: 20, bottom: 5, left: 20 }}
 		>
 			<Line type="monotone" dataKey="value" stroke="#fc8181" />
 			<CartesianGrid stroke="#fed8d7" strokeDasharray="5 5" />
