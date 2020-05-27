@@ -22,11 +22,9 @@ const Categories = () => {
 					</div>
 				</div>
 				<div class="flex -mx-2">
-					<div class="w-1/2 px-2 mb-4">
+					<div class="w-1/2 h-full px-2 mb-4 text-center shadow-md bg-red-400 rounded p-3">
 						<Card>
-							<div class="text-center shadow-md bg-red-400 rounded p-3">
-								<Icons />
-							</div>
+							<Icons />
 						</Card>
 					</div>
 					<div class="w-1/2 px-2  mb-4">
