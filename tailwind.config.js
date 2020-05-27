@@ -14,7 +14,6 @@ module.exports = {
 				dark: { raw: '(prefers-color-scheme: dark)' },
 			},
 		},
-
 		colors: {
 			transparent: 'transparent',
 
@@ -97,6 +96,7 @@ module.exports = {
 				700: '#2b6cb0',
 				800: '#2c5282',
 				900: '#2a4365',
+				base: '#224afb',
 			},
 			indigo: {
 				100: '#ebf4ff',
@@ -497,5 +497,5 @@ module.exports = {
 		zIndex: ['responsive'],
 	},
 	corePlugins: {},
-	plugins: [],
+	plugins: [require('@tailwindcss/custom-forms')],
 }

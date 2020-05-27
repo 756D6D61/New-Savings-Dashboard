@@ -13,7 +13,7 @@ const NewPage = ({ children, route }) => {
 				<div class="bg-red-500 p-5">
 					<Nav route={route} />
 				</div>
-				<div class="bg-red-100  w-full p-5">
+				<div class="bg-red-100 w-full p-5">
 					<div class="flex flex-col">{children}</div>
 				</div>
 			</div>
