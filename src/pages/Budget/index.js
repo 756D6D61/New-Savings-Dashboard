@@ -21,7 +21,7 @@ const Budget = () => {
 					</div>
 				</div>
 				<div class="flex flex-wrap">
-					<div class="w-full bg-red-400 rounded p-5 text-center">
+					<div class="w-full shadow-md bg-red-400 rounded p-5 text-center">
 						<Card>
 							<Icons />
 						</Card>
