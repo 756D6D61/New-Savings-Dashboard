@@ -9,7 +9,7 @@ const SubDivider = ({ children }) => {
 	return (
 		<div class=" w-full -mt-5 z-0 font-light -ml-1 text-2xl">
 			<div class="pt-5 pb-2 text-red-500">{children}</div>
-			<hr />
+			<hr class="border-red-200" />
 		</div>
 	)
 }

@@ -33,7 +33,7 @@ const BudgetOverview = () => {
 	return (
 		<>
 			<p class="text-2xl text-center text-red-600">Budgets</p>
-			<hr />
+			<hr class="border-red-300" />
 			<div class="flex h-10">
 				<div class="w-1/2">
 					<p class="text-xl">£{Math.round(sum).toLocaleString()}</p>

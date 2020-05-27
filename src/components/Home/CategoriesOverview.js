@@ -18,20 +18,17 @@ const CategoriesOverview = () => {
 		dispatch(categoryData())
 	}, [dispatch])
 
-	console.log(categories)
-
 	const data = Object.keys(categories)
 		.map(function (key) {
 			return categories[key]
 		})
 		.flat()
 		.map((a) => Math.round(a.value).toLocaleString())
-	console.log(data)
 
 	return (
 		<>
 			<p class="text-2xl text-center text-red-600">Categories</p>
-			<hr />
+			<hr class="border-red-300" />
 			<div class="flex text-center">
 				<div class="w-1/4">
 					<FontAwesomeIcon icon={faBirthdayCake} />
