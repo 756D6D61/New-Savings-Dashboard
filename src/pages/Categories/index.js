@@ -15,19 +15,16 @@ const Categories = () => {
 				<SubDivider>
 					<FontAwesomeIcon icon={faBorderAll} size="sm" /> Categories
 				</SubDivider>
-				<br />
-				<div class="flex flex-row">
-					<div class="w-full text-center mb-4">
-						<AddButton>Categories</AddButton>
-					</div>
+				<div class="w-full pt-3 text-center mb-2">
+					<AddButton>Categories</AddButton>
 				</div>
-				<div class="flex flex-row -mx-2">
+				<div class="flex items-center flex-col -mx-2">
 					<div class="w-1/2 h-full px-2 mb-4 text-center shadow-md bg-red-400 rounded p-3">
 						<Card>
 							<Icons />
 						</Card>
 					</div>
-					<div class="w-1/2 px-2  mb-4">
+					<div class="w-1/2   mb-4">
 						<div class="text-center shadow-md bg-red-400 rounded p-3">
 							<Table />
 						</div>
