@@ -40,4 +40,6 @@ This dashboard shows mock data that is computed via a fake server. The data show
 
 -   To run Cypress tests: `yarn run cypress open`
 
+https://savings-db-4ae4b7.netlify.app/
+
 **THIS PROJECT IS IN WORKING PROGRESS**
