@@ -44,23 +44,36 @@ const BudgetIcons = (props) => {
 			.map((a) => Math.round(a.value).toLocaleString())
 	)
 	const names = Object.keys(budgets)
+	console.log(props.values)
 	return (
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
-			{values.map((a, indx) => {
-				return (
-					<div className="my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3">
-						<button className="text-center bg-transparent hover:bg-red-400 text-red-400 font-semibold hover:text-white h-20 w-20 border border-red-400 hover:border-transparent rounded outline-none focus:outline-none">
-							<FontAwesomeIcon icon={icons[indx].name} />
-							<br />
-							{names[indx].charAt(0).toUpperCase() +
-								names[indx].slice(1)}
-							<hr class="border-red-300" />£{a}
-						</button>
-					</div>
-				)
-			})}
+			{props.values &&
+				values.map((a, indx) => {
+					return (
+						<div className={props.className}>
+							<button className={props.buttonClassName}>
+								<FontAwesomeIcon icon={icons[indx].name} />
+								<br />
+								{names[indx].charAt(0).toUpperCase() +
+									names[indx].slice(1)}
+								<hr class="border-red-300" />£{a}
+							</button>
+						</div>
+					)
+				})}
 		</div>
 	)
 }
 
 export default BudgetIcons
+/*
+<div className={props.className}>
+	<button className={props.buttonClassName}>
+		<FontAwesomeIcon icon={icons[indx].name} />
+		<br />
+		{names[indx].charAt(0).toUpperCase() +
+			names[indx].slice(1)}
+		<hr class="border-red-300" />£{a}
+	</button>
+</div>
+ */
