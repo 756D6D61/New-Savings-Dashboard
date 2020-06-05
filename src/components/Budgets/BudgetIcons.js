@@ -14,7 +14,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux'
 import { budgetData } from '../../store/actions/data.actions'
 
-const BudgetIcons = () => {
+const BudgetIcons = (props) => {
 	const dispatch = useDispatch()
 
 	const budgets = useSelector((state) => state.data.budget)
@@ -35,13 +35,14 @@ const BudgetIcons = () => {
 		{ id: 8, name: faReceipt, label: 'Misc.' },
 	]
 
-	const values = Object.keys(budgets)
-		.map(function (key) {
-			return budgets[key]
-		})
-		.flat()
-		.map((a) => Math.round(a.value).toLocaleString())
-
+	const values = Array.from(
+		Object.keys(budgets)
+			.map(function (key) {
+				return budgets[key]
+			})
+			.flat()
+			.map((a) => Math.round(a.value).toLocaleString())
+	)
 	const names = Object.keys(budgets)
 	return (
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">

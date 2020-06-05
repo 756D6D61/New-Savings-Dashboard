@@ -36,7 +36,7 @@ const Budget = () => {
 									: 'bg-none rounded'
 							}
 						>
-							<Icons />
+							<Icons values/>
 						</div>
 					</div>
 				</div>
