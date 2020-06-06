@@ -37,7 +37,6 @@ const Budget = () => {
 							}
 						>
 							<Icons
-								values
 								className={
 									'my-1 px-1 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2 md:px-2 md:w-1/3 lg:my-2 lg:px-2 lg:w-1/3 xl:w-1/3'
 								}

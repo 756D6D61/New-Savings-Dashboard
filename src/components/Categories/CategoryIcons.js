@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
 import { categoryData } from '../../store/actions/data.actions'
-//import Icons from '../Budgets/BudgetIcons'
 const CategoryIcons = () => {
 	const dispatch = useDispatch()
 

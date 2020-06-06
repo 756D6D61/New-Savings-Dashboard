@@ -35,32 +35,29 @@ const BudgetIcons = (props) => {
 		{ id: 8, name: faReceipt, label: 'Misc.' },
 	]
 
-	const values = Array.from(
-		Object.keys(budgets)
-			.map(function (key) {
-				return budgets[key]
-			})
-			.flat()
-			.map((a) => Math.round(a.value).toLocaleString())
-	)
+	const values = Object.keys(budgets)
+		.map(function (key) {
+			return budgets[key]
+		})
+		.flat()
+		.map((a) => Math.round(a.value).toLocaleString())
+
 	const names = Object.keys(budgets)
-	console.log(props.values)
 	return (
 		<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2">
-			{props.values &&
-				values.map((a, indx) => {
-					return (
-						<div className={props.className}>
-							<button className={props.buttonClassName}>
-								<FontAwesomeIcon icon={icons[indx].name} />
-								<br />
-								{names[indx].charAt(0).toUpperCase() +
-									names[indx].slice(1)}
-								<hr class="border-red-300" />£{a}
-							</button>
-						</div>
-					)
-				})}
+			{values.map((a, indx) => {
+				return (
+					<div className={props.className}>
+						<button className={props.buttonClassName}>
+							<FontAwesomeIcon icon={icons[indx].name} />
+							<br />
+							{names[indx].charAt(0).toUpperCase() +
+								names[indx].slice(1)}
+							<hr class="border-red-300" />£{a}
+						</button>
+					</div>
+				)
+			})}
 		</div>
 	)
 }
